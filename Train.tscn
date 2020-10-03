@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/trainpart.png" type="Texture" id=1]
+[ext_resource path="res://Train.cs" type="Script" id=2]
+[ext_resource path="res://blur.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://Assets/guyt.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="background"]
+position = Vector2( 1671.44, 574.599 )
+scale = Vector2( 2.19955, 1 )
+frames = ExtResource( 3 )
+animation = "blur"
+frame = 3
+speed_scale = 3.0
+playing = true
+offset = Vector2( -514.265, -246.007 )
+
+[node name="Train" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="trainpart" type="Sprite" parent="Train"]
+position = Vector2( -148.599, -161.753 )
+texture = ExtResource( 1 )
+offset = Vector2( 389.307, 484.148 )
+
+[node name="trainpart2" type="Sprite" parent="Train"]
+position = Vector2( -148.599, -161.753 )
+texture = ExtResource( 1 )
+offset = Vector2( 869.146, 484.337 )
+
+[node name="trainpart3" type="Sprite" parent="Train"]
+position = Vector2( 330.975, -162.094 )
+texture = ExtResource( 1 )
+offset = Vector2( 869.146, 484.337 )
+
+[node name="guyt" type="Sprite" parent="Train"]
+position = Vector2( 686.477, 373.555 )
+texture = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+[connection signal="timeout" from="Timer" to="Train" method="_on_Timer_timeout"]
