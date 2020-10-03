@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blur-sheet.png-f98a9b34172957e3721b6a819dc65057.stex"
+path="res://.import/skill-desc_0002_far-buildings.png-29a7226f89e79b8a360bf67f7f6a5a80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/blur-sheet.png"
-dest_files=[ "res://.import/blur-sheet.png-f98a9b34172957e3721b6a819dc65057.stex" ]
+source_file="res://Assets/Temp/skill-desc_0002_far-buildings.png"
+dest_files=[ "res://.import/skill-desc_0002_far-buildings.png-29a7226f89e79b8a360bf67f7f6a5a80.stex" ]
 
 [params]
 

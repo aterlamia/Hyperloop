@@ -1,9 +1,75 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Assets/trainpart.png" type="Texture" id=1]
 [ext_resource path="res://Train.cs" type="Script" id=2]
 [ext_resource path="res://blur.tres" type="SpriteFrames" id=3]
-[ext_resource path="res://Assets/guyt.png" type="Texture" id=4]
+[ext_resource path="res://Anom/charactre.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://Player.cs" type="Script" id=5]
+[ext_resource path="res://Assets/trainpart2.png" type="Texture" id=6]
+[ext_resource path="res://Assets/trainpart4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/trainpart3.png" type="Texture" id=8]
+[ext_resource path="res://Parts.cs" type="Script" id=9]
+[ext_resource path="res://Assets/Temp/skill-desc_0003_bg.png" type="Texture" id=10]
+[ext_resource path="res://ParallaxBackground.cs" type="Script" id=11]
+[ext_resource path="res://ParallaxLayer.cs" type="Script" id=12]
+[ext_resource path="res://Assets/Temp/skill-desc_0002_far-buildings.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Temp/skill-desc_0001_buildings.png" type="Texture" id=14]
+[ext_resource path="res://Assets/trainpart5.png" type="Texture" id=15]
+[ext_resource path="res://Assets/warning.png" type="Texture" id=16]
+[ext_resource path="res://Assets/phone.png" type="Texture" id=17]
+[ext_resource path="res://Assets/portrait.png" type="Texture" id=18]
+[ext_resource path="res://Panel.cs" type="Script" id=19]
+
+[sub_resource type="CanvasItemMaterial" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 139.599 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 42, 39 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 42, 0, 42, 39 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 84, 0, 42, 39 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 126, 0, 42, 39 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.4408
+height = 86.0355
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.6, 0.6, 0.6, 0.309804 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Assets/fonts/Pixel.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 13
+font_data = SubResource( 12 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,34 +80,208 @@ position = Vector2( 1671.44, 574.599 )
 scale = Vector2( 2.19955, 1 )
 frames = ExtResource( 3 )
 animation = "blur"
-frame = 3
 speed_scale = 3.0
 playing = true
 offset = Vector2( -514.265, -246.007 )
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="background"]
+script = ExtResource( 11 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="background/ParallaxBackground"]
+material = SubResource( 3 )
+motion_mirroring = Vector2( 272, 0 )
+script = ExtResource( 12 )
+speed = 2.0
+
+[node name="skill-desc_0003_bg" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 513.17, 376.075 )
+scale = Vector2( 3.78902, 4.76154 )
+texture = ExtResource( 10 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="background/ParallaxBackground"]
+material = SubResource( 3 )
+position = Vector2( 851.533, 142.278 )
+motion_offset = Vector2( 3.12679e+06, 0 )
+motion_mirroring = Vector2( 1704, 0 )
+script = ExtResource( 12 )
+speed = 5.0
+
+[node name="skill-desc_0002_far-buildings" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 1.68188, -20.1815 )
+texture = ExtResource( 13 )
+
+[node name="skill-desc_0002_far-buildings2" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 0.00012207, 149.68 )
+texture = ExtResource( 13 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="background/ParallaxBackground"]
+material = SubResource( 3 )
+position = Vector2( 851.533, 142.278 )
+motion_offset = Vector2( 4.03628e+06, 0 )
+motion_mirroring = Vector2( 1704, 0 )
+script = ExtResource( 12 )
+speed = 7.0
+
+[node name="skill-desc_0001_buildings" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( -13.322, 93.8459 )
+scale = Vector2( 1, 1.89323 )
+texture = ExtResource( 14 )
+
+[node name="Polygon2D" type="Polygon2D" parent="background"]
+position = Vector2( 0.396851, 0 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -47, 480, 1399, 472, 1386, 980, -152, 951 )
+
 [node name="Train" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="trainpart" type="Sprite" parent="Train"]
+[node name="Parts" type="KinematicBody2D" parent="Train"]
+script = ExtResource( 9 )
+speed = 6000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Parts"]
+shape = SubResource( 2 )
+
+[node name="trainpart" type="Sprite" parent="Train/Parts"]
 position = Vector2( -148.599, -161.753 )
 texture = ExtResource( 1 )
 offset = Vector2( 389.307, 484.148 )
 
-[node name="trainpart2" type="Sprite" parent="Train"]
-position = Vector2( -148.599, -161.753 )
+[node name="trainpart2" type="Sprite" parent="Train/Parts"]
+position = Vector2( -148.766, -161.753 )
 texture = ExtResource( 1 )
 offset = Vector2( 869.146, 484.337 )
 
-[node name="trainpart3" type="Sprite" parent="Train"]
-position = Vector2( 330.975, -162.094 )
+[node name="trainpart3" type="Sprite" parent="Train/Parts"]
+position = Vector2( 330.975, -162.935 )
 texture = ExtResource( 1 )
 offset = Vector2( 869.146, 484.337 )
 
-[node name="guyt" type="Sprite" parent="Train"]
-position = Vector2( 686.477, 373.555 )
-texture = ExtResource( 4 )
+[node name="trainpart4" type="Sprite" parent="Train/Parts"]
+position = Vector2( 2158.66, 321.24 )
+texture = ExtResource( 6 )
+
+[node name="trainpart5" type="Sprite" parent="Train/Parts"]
+position = Vector2( 2635.1, 321.066 )
+texture = ExtResource( 8 )
+
+[node name="trainpart6" type="Sprite" parent="Train/Parts"]
+position = Vector2( 1679.48, 321.402 )
+texture = ExtResource( 7 )
+
+[node name="trainpart7" type="Sprite" parent="Train/Parts"]
+position = Vector2( -715.377, 322.348 )
+texture = ExtResource( 7 )
+
+[node name="trainpart8" type="Sprite" parent="Train/Parts"]
+position = Vector2( -239.085, 322.203 )
+texture = ExtResource( 8 )
+
+[node name="trainpart9" type="Sprite" parent="Train/Parts"]
+position = Vector2( -1195.38, 322.338 )
+texture = ExtResource( 15 )
+
+[node name="Door" type="Area2D" parent="Train/Parts/trainpart9"]
+position = Vector2( 14.4893, -10.0793 )
+
+[node name="DoorShaope" type="CollisionShape2D" parent="Train/Parts/trainpart9/Door"]
+position = Vector2( -221.428, 46.0867 )
+shape = SubResource( 4 )
+
+[node name="Phone" type="Area2D" parent="Train/Parts/trainpart9"]
+
+[node name="PhpneSHape" type="CollisionShape2D" parent="Train/Parts/trainpart9/Phone"]
+position = Vector2( -116.131, 18.6877 )
+shape = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart9/Phone"]
+position = Vector2( -115.979, 17.4258 )
+frames = SubResource( 10 )
+frame = 2
+playing = true
+
+[node name="Player" type="RigidBody2D" parent="Train"]
+position = Vector2( 488.713, 370.271 )
+mode = 2
+gravity_scale = 0.0
+contact_monitor = true
+script = ExtResource( 5 )
+speed = 6000.0
+
+[node name="warning" type="Sprite" parent="Train/Player"]
+visible = false
+position = Vector2( 13.0609, -82.949 )
+texture = ExtResource( 16 )
+
+[node name="PAnimlayer" type="AnimatedSprite" parent="Train/Player"]
+position = Vector2( 0, 6 )
+frames = ExtResource( 4 )
+animation = "idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Player"]
+position = Vector2( -2.61112, 2.41623 )
+shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 184.726
+margin_top = 515.643
+margin_right = 888.726
+margin_bottom = 589.643
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control/Panel"]
+margin_left = 10.0
+margin_top = 6.0
+margin_right = 73.0
+margin_bottom = 68.0
+custom_styles/panel = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="portrait" type="Sprite" parent="Control/Panel/Panel"]
+position = Vector2( 36.7003, 26.4506 )
+scale = Vector2( 1.41272, 1.36573 )
+texture = ExtResource( 18 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/Panel"]
+margin_left = 73.8141
+margin_top = 3.1748
+margin_right = 507.814
+margin_bottom = 43.1748
+custom_fonts/normal_font = SubResource( 13 )
+text = "I can't go in there
+It seems to be locked"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_exited"]
+[connection signal="body_entered" from="Train/Player" to="Train/Parts" method="_on_Player_body_entered"]
 [connection signal="timeout" from="Timer" to="Train" method="_on_Timer_timeout"]
