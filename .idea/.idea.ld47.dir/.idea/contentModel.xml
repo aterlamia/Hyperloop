@@ -12,6 +12,11 @@
           </e>
         </e>
       </e>
+      <e p="Panel.cs" t="Include" />
+      <e p="ParallaxBackground.cs" t="Include" />
+      <e p="ParallaxLayer.cs" t="Include" />
+      <e p="Parts.cs" t="Include" />
+      <e p="Player.cs" t="Include" />
       <e p="Train.cs" t="Include" />
       <e p="ld47.csproj" t="IncludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
