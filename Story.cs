@@ -35,14 +35,10 @@ public class Story : Node2D
 
 	private void _timer_callback()
 	{
-		GD.Print(starTimerCalled);
-		GD.Print("starTimerCalled");
 		switch (starTimerCalled)
 		{
 			case 0: //debug
-			case 1: //debug
-				GD.Print(starTimerCalled);
-				this.EmitSignal("IntroFinished");
+				EmitSignal("IntroFinished");
 				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
 				GetNode<State>("/root/State").AddState(Statetype.CORRECT_NPC_TALKED_TO);
 				GetNode<State>("/root/State").AddState(Statetype.DOOR3);
@@ -346,10 +342,13 @@ public class Story : Node2D
 				Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = true;
 				Owner.GetNode<Sprite>("Control/Panel/Panel/portraitgirl").Visible = false;
 				Owner.GetNode<Panel>("Control/Panel").Visible = true;
-				inPhoneCall = false;
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("UnBlockMovement");
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("PhoneDone");
 				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
+				break;
+			case 13:
+				Owner.GetNode<Panel>("Control/Panel").Visible = false;
+				inPhoneCall = false;
 				break;
 		}
 	}

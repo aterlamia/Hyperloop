@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Assets/trainpart.png" type="Texture" id=1]
 [ext_resource path="res://Train.cs" type="Script" id=2]
@@ -41,23 +41,22 @@
 [ext_resource path="res://Assets/speaker.png" type="Texture" id=39]
 [ext_resource path="res://SpeakerStart.cs" type="Script" id=40]
 [ext_resource path="res://justspeaker1.png" type="Texture" id=41]
-[ext_resource path="res://Assets/suitcase2.png" type="Texture" id=42]
+[ext_resource path="res://Assets/suitcase3.png" type="Texture" id=42]
 [ext_resource path="res://Assets/suitcase1.png" type="Texture" id=43]
-[ext_resource path="res://Assets/duffle.png" type="Texture" id=44]
-[ext_resource path="res://Assets/pile..png" type="Texture" id=45]
-[ext_resource path="res://Assets/backpack.png" type="Texture" id=46]
-[ext_resource path="res://Assets/suitcase3.png" type="Texture" id=47]
-[ext_resource path="res://ToiletDoor.cs" type="Script" id=48]
-[ext_resource path="res://Assets/light.png" type="Texture" id=49]
-[ext_resource path="res://light.cs" type="Script" id=50]
-[ext_resource path="res://Assets/pole front.png" type="Texture" id=51]
-[ext_resource path="res://Assets/asepritefuiles/enemy1.png" type="Texture" id=52]
-[ext_resource path="res://Enemy.cs" type="Script" id=53]
+[ext_resource path="res://Assets/backpack.png" type="Texture" id=44]
+[ext_resource path="res://Assets/duffle.png" type="Texture" id=45]
+[ext_resource path="res://Assets/pile..png" type="Texture" id=46]
+[ext_resource path="res://Assets/suitcase2.png" type="Texture" id=47]
+[ext_resource path="res://Assets/light.png" type="Texture" id=48]
+[ext_resource path="res://ToiletDoor.cs" type="Script" id=49]
+[ext_resource path="res://Assets/pole front.png" type="Texture" id=50]
+[ext_resource path="res://Assets/asepritefuiles/enemy1.png" type="Texture" id=51]
+[ext_resource path="res://Assets/asepritefuiles/enemy2.png" type="Texture" id=52]
+[ext_resource path="res://Assets/en1idler1.png" type="Texture" id=53]
 [ext_resource path="res://Assets/en2idler1.png" type="Texture" id=54]
-[ext_resource path="res://Assets/asepritefuiles/enemy2.png" type="Texture" id=55]
-[ext_resource path="res://Assets/en1idler1.png" type="Texture" id=56]
+[ext_resource path="res://Enemy.cs" type="Script" id=55]
+[ext_resource path="res://Assets/enmportrait2.png" type="Texture" id=56]
 [ext_resource path="res://Assets/enmportrait1.png" type="Texture" id=57]
-[ext_resource path="res://Assets/enmportrait2.png" type="Texture" id=58]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -131,122 +130,125 @@ animations = [ {
 
 [sub_resource type="CircleShape2D" id=17]
 
-[sub_resource type="AtlasTexture" id=18]
-flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 0, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 106, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 212, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 318, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 424, 0, 106, 149 )
+[sub_resource type="CircleShape2D" id=21]
+radius = 19.0053
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 530, 0, 106, 149 )
+atlas = ExtResource( 51 )
+region = Rect2( 0, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 636, 0, 106, 149 )
+atlas = ExtResource( 51 )
+region = Rect2( 106, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 742, 0, 106, 149 )
+atlas = ExtResource( 51 )
+region = Rect2( 212, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 52 )
-region = Rect2( 848, 0, 106, 149 )
+atlas = ExtResource( 51 )
+region = Rect2( 318, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 52 )
+atlas = ExtResource( 51 )
+region = Rect2( 424, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 51 )
+region = Rect2( 530, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 51 )
+region = Rect2( 636, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 51 )
+region = Rect2( 742, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 51 )
+region = Rect2( 848, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 51 )
 region = Rect2( 954, 0, 106, 149 )
 
-[sub_resource type="SpriteFrames" id=28]
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 56 ) ],
+"frames": [ ExtResource( 53 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=29]
-flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 0, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 106, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 212, 0, 106, 149 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 318, 0, 106, 149 )
-
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 424, 0, 106, 149 )
+atlas = ExtResource( 52 )
+region = Rect2( 0, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 530, 0, 106, 149 )
+atlas = ExtResource( 52 )
+region = Rect2( 106, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 636, 0, 106, 149 )
+atlas = ExtResource( 52 )
+region = Rect2( 212, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 742, 0, 106, 149 )
+atlas = ExtResource( 52 )
+region = Rect2( 318, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
-atlas = ExtResource( 55 )
-region = Rect2( 848, 0, 106, 149 )
+atlas = ExtResource( 52 )
+region = Rect2( 424, 0, 106, 149 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
-atlas = ExtResource( 55 )
+atlas = ExtResource( 52 )
+region = Rect2( 530, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 52 )
+region = Rect2( 636, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 52 )
+region = Rect2( 742, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 52 )
+region = Rect2( 848, 0, 106, 149 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 52 )
 region = Rect2( 954, 0, 106, 149 )
 
-[sub_resource type="SpriteFrames" id=39]
+[sub_resource type="SpriteFrames" id=43]
 animations = [ {
-"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.0
@@ -257,16 +259,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=40]
-radius = 21.3872
-
-[sub_resource type="CapsuleShape2D" id=41]
+[sub_resource type="CapsuleShape2D" id=18]
 radius = 19.4085
 height = 113.188
 
-[sub_resource type="CapsuleShape2D" id=42]
+[sub_resource type="CapsuleShape2D" id=19]
 
-[sub_resource type="StyleBoxFlat" id=43]
+[sub_resource type="StyleBoxFlat" id=20]
 bg_color = Color( 0.6, 0.6, 0.6, 0.309804 )
 
 [node name="Node2D" type="Node2D"]
@@ -278,6 +277,7 @@ position = Vector2( 1671.44, 574.599 )
 scale = Vector2( 2.19955, 1 )
 frames = ExtResource( 3 )
 animation = "blur"
+frame = 2
 speed_scale = 3.0
 playing = true
 offset = Vector2( -514.265, -246.007 )
@@ -287,7 +287,7 @@ script = ExtResource( 11 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="background/ParallaxBackground"]
 material = SubResource( 1 )
-motion_offset = Vector2( 8.49992e+06, 0 )
+motion_offset = Vector2( 5.25398e+06, 0 )
 motion_mirroring = Vector2( 272, 0 )
 script = ExtResource( 12 )
 speed = 3.0
@@ -299,7 +299,7 @@ texture = ExtResource( 10 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="background/ParallaxBackground"]
 material = SubResource( 1 )
-motion_offset = Vector2( 3.1173e+07, 0 )
+motion_offset = Vector2( 2.25171e+07, 0 )
 motion_mirroring = Vector2( 1704, 0 )
 script = ExtResource( 12 )
 speed = 8.0
@@ -315,7 +315,7 @@ texture = ExtResource( 13 )
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="background/ParallaxBackground"]
 material = SubResource( 1 )
 position = Vector2( 851.533, 142.278 )
-motion_offset = Vector2( 4.61026e+07, 0 )
+motion_offset = Vector2( 3.31187e+07, 0 )
 motion_mirroring = Vector2( 1704, 0 )
 script = ExtResource( 12 )
 speed = 12.0
@@ -326,9 +326,9 @@ scale = Vector2( 1, 1.89323 )
 texture = ExtResource( 14 )
 
 [node name="Polygon2D" type="Polygon2D" parent="background"]
-position = Vector2( 1167, 848.46 )
+position = Vector2( 303.649, 488.204 )
 color = Color( 0, 0, 0, 1 )
-offset = Vector2( -1162.62, -827.481 )
+offset = Vector2( -303.252, -488.204 )
 polygon = PoolVector2Array( -47, 480, 1399, 472, 1386, 980, -152, 951 )
 
 [node name="Train" type="Node2D" parent="."]
@@ -336,9 +336,6 @@ script = ExtResource( 2 )
 
 [node name="Parts" type="KinematicBody2D" parent="Train"]
 script = ExtResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
 speed = 6000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Parts"]
@@ -360,29 +357,28 @@ offset = Vector2( 869.146, 484.337 )
 position = Vector2( 1092.63, 494.904 )
 shape = SubResource( 3 )
 
-[node name="trainpart3" type="Sprite" parent="Train/Parts"]
-position = Vector2( 1808.85, 667.276 )
-texture = ExtResource( 1 )
-offset = Vector2( 869.146, 484.337 )
-
-[node name="trainpart5" type="Sprite" parent="Train/Parts/trainpart3"]
-position = Vector2( -130.693, -344.938 )
+[node name="trainpart6" type="Sprite" parent="Train/Parts"]
+position = Vector2( 1676.56, 322.338 )
 texture = ExtResource( 15 )
 
-[node name="trainpart6" type="Sprite" parent="Train/Parts/trainpart3/trainpart5"]
-position = Vector2( -478.002, 0 )
+[node name="trainpart6" type="Sprite" parent="Train/Parts/trainpart6"]
+position = Vector2( -477.502, 0 )
 texture = ExtResource( 28 )
 
-[node name="duffle" type="Sprite" parent="Train/Parts/trainpart3/trainpart5/trainpart6"]
-position = Vector2( -160.655, 88.162 )
+[node name="duffle" type="Sprite" parent="Train/Parts/trainpart6/trainpart6"]
+position = Vector2( -85.6079, 38.869 )
+texture = ExtResource( 45 )
+
+[node name="backpack" type="Sprite" parent="Train/Parts/trainpart6/trainpart6"]
+position = Vector2( 0.809204, 76.7322 )
 texture = ExtResource( 44 )
 
-[node name="duffle2" type="Sprite" parent="Train/Parts/trainpart3/trainpart5/trainpart6"]
-position = Vector2( -90.655, 87.662 )
-texture = ExtResource( 44 )
+[node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart6"]
+position = Vector2( -8.33411, 80.9123 )
+texture = ExtResource( 42 )
 
-[node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart3/trainpart5/trainpart6"]
-position = Vector2( -57.155, 34.162 )
+[node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart6/suitcase3"]
+position = Vector2( 113.428, -46.2637 )
 texture = ExtResource( 43 )
 
 [node name="trainpart4" type="Sprite" parent="Train/Parts"]
@@ -396,10 +392,6 @@ texture = ExtResource( 8 )
 [node name="maincharsit" type="Sprite" parent="Train/Parts"]
 position = Vector2( 516.427, 369.971 )
 texture = ExtResource( 20 )
-
-[node name="trainpart6" type="Sprite" parent="Train/Parts"]
-position = Vector2( 2308.86, 668.46 )
-texture = ExtResource( 7 )
 
 [node name="trainpart7" type="Sprite" parent="Train/Parts"]
 position = Vector2( -715.377, 322.348 )
@@ -433,35 +425,48 @@ shape = SubResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart9/Phone"]
 position = Vector2( -115.979, 17.4258 )
 frames = SubResource( 10 )
+frame = 2
 playing = true
 
 [node name="pile" type="Sprite" parent="Train/Parts/trainpart9"]
-position = Vector2( 72.88, 48.662 )
-texture = ExtResource( 45 )
-
-[node name="suitcase2" type="Sprite" parent="Train/Parts/trainpart9"]
-position = Vector2( -0.619995, 31.162 )
-texture = ExtResource( 42 )
+position = Vector2( 72.38, 48.662 )
+texture = ExtResource( 46 )
 
 [node name="trainpart10" type="Sprite" parent="Train/Parts"]
 position = Vector2( -1675.31, 322.338 )
 texture = ExtResource( 28 )
 
-[node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart10"]
-position = Vector2( -140.782, 81.3923 )
-texture = ExtResource( 43 )
-
 [node name="suitcase2" type="Sprite" parent="Train/Parts/trainpart10"]
-position = Vector2( -11.1566, 81.8378 )
-texture = ExtResource( 43 )
-
-[node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart10"]
-position = Vector2( -41.0017, 83.1741 )
+position = Vector2( 5.31006, 31.162 )
 texture = ExtResource( 47 )
 
+[node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart10"]
+position = Vector2( 4.81006, 80.662 )
+texture = ExtResource( 47 )
+
+[node name="suitcase4" type="Sprite" parent="Train/Parts/trainpart10"]
+position = Vector2( -16.1899, 81.662 )
+texture = ExtResource( 47 )
+
+[node name="suitcase5" type="Sprite" parent="Train/Parts/trainpart10"]
+position = Vector2( -42.6899, 81.662 )
+texture = ExtResource( 47 )
+
+[node name="suitcase6" type="Sprite" parent="Train/Parts/trainpart10"]
+position = Vector2( -28.6899, 84.162 )
+texture = ExtResource( 42 )
+
+[node name="suitcase7" type="Sprite" parent="Train/Parts/trainpart10"]
+position = Vector2( -55.1899, 85.662 )
+texture = ExtResource( 42 )
+
+[node name="duffle2" type="Sprite" parent="Train/Parts/trainpart10"]
+position = Vector2( -159.19, 36.0077 )
+texture = ExtResource( 45 )
+
 [node name="duffle" type="Sprite" parent="Train/Parts/trainpart10"]
-position = Vector2( -85.5466, 37.7383 )
-texture = ExtResource( 44 )
+position = Vector2( -111.69, 36.9258 )
+texture = ExtResource( 45 )
 
 [node name="trainpart11" type="Sprite" parent="Train/Parts"]
 position = Vector2( -2155.06, 322.338 )
@@ -516,8 +521,21 @@ position = Vector2( -2634.32, 322.338 )
 texture = ExtResource( 27 )
 
 [node name="trainpart14" type="Sprite" parent="Train/Parts"]
-position = Vector2( -3593.55, 322.338 )
+position = Vector2( -3594.05, 322.338 )
 texture = ExtResource( 15 )
+
+[node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart14"]
+position = Vector2( 8.89722, 80.6913 )
+texture = ExtResource( 43 )
+
+[node name="suitcase8" type="Sprite" parent="Train/Parts/trainpart14"]
+position = Vector2( 58.844, 81.2859 )
+texture = ExtResource( 43 )
+
+[node name="suitcase9" type="Sprite" parent="Train/Parts/trainpart14"]
+position = Vector2( 96.8987, 79.5021 )
+rotation = -0.785397
+texture = ExtResource( 47 )
 
 [node name="Door2" type="Area2D" parent="Train/Parts/trainpart14"]
 position = Vector2( 0, -10.079 )
@@ -530,52 +548,31 @@ position = Vector2( -221.428, 46.0867 )
 shape = SubResource( 4 )
 one_way_collision_margin = 2.0
 
-[node name="duffle" type="Sprite" parent="Train/Parts/trainpart14"]
-modulate = Color( 0.345098, 0.921569, 0.380392, 1 )
-position = Vector2( 33.5, 38.1112 )
-texture = ExtResource( 44 )
-
 [node name="pile" type="Sprite" parent="Train/Parts/trainpart14"]
-position = Vector2( 81.9197, 47.5679 )
-scale = Vector2( -1, 1 )
-texture = ExtResource( 45 )
-
-[node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart14"]
-modulate = Color( 0.027451, 0.552941, 0.172549, 1 )
-position = Vector2( 41.1013, 89.1997 )
-scale = Vector2( 0.609619, 0.552859 )
-texture = ExtResource( 43 )
+position = Vector2( 97.8958, 47.933 )
+texture = ExtResource( 46 )
 
 [node name="trainpart16" type="Sprite" parent="Train/Parts"]
 position = Vector2( -4552.78, 322.442 )
 texture = ExtResource( 7 )
 
-[node name="backpack" type="Sprite" parent="Train/Parts/trainpart16"]
-position = Vector2( 2698.14, 84.6459 )
-scale = Vector2( 0.716216, 0.586957 )
-texture = ExtResource( 46 )
-
 [node name="trainpart15" type="Sprite" parent="Train/Parts"]
 position = Vector2( -4073.64, 322.338 )
 texture = ExtResource( 28 )
-
-[node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart15"]
-position = Vector2( -193.247, 79.8011 )
-texture = ExtResource( 47 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart15"]
 visible = false
 position = Vector2( 46.2354, -37.9452 )
 scale = Vector2( -1, 1 )
 frames = SubResource( 16 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Train/Parts/trainpart15"]
 visible = false
 position = Vector2( -525.085, -37.9611 )
 frames = SubResource( 16 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="SpeakerStart" type="Area2D" parent="Train/Parts/trainpart15"]
@@ -585,6 +582,27 @@ texture = ExtResource( 41 )
 [node name="SpeakerSHape" type="CollisionShape2D" parent="Train/Parts/trainpart15/SpeakerStart"]
 position = Vector2( -96.7476, 10.813 )
 shape = SubResource( 17 )
+
+[node name="backpack" type="Sprite" parent="Train/Parts/trainpart15"]
+position = Vector2( -76.9553, 81.3955 )
+rotation = -1.57079
+texture = ExtResource( 44 )
+
+[node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart15/backpack"]
+position = Vector2( -13.1373, 76.9553 )
+texture = ExtResource( 42 )
+
+[node name="suitcase2" type="Sprite" parent="Train/Parts/trainpart15"]
+position = Vector2( -190.978, 79.5057 )
+texture = ExtResource( 47 )
+
+[node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart15"]
+position = Vector2( -172.709, 32.8886 )
+texture = ExtResource( 43 )
+
+[node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart15"]
+position = Vector2( -143.731, 35.4084 )
+texture = ExtResource( 42 )
 
 [node name="trainpart17" type="Sprite" parent="Train/Parts"]
 position = Vector2( -5031.74, 322.338 )
@@ -598,44 +616,8 @@ texture = ExtResource( 8 )
 position = Vector2( -955.787, 0 )
 texture = ExtResource( 27 )
 
-[node name="Enemy1" type="KinematicBody2D" parent="Train/Parts/trainpart17/trainpart7"]
-visible = false
-position = Vector2( 13.8057, 0 )
-script = ExtResource( 53 )
-__meta__ = {
-"_edit_group_": true
-}
-dest = Vector2( 1025.16, 0 )
-dest2 = Vector2( 1600, 0 )
-turn = true
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart17/trainpart7/Enemy1"]
-position = Vector2( 0, 47.933 )
-scale = Vector2( 1.2, 1.2 )
-frames = SubResource( 28 )
-frame = 2
-playing = true
-flip_h = true
-
-[node name="Enemy2" type="KinematicBody2D" parent="Train/Parts/trainpart17/trainpart7"]
-visible = false
-script = ExtResource( 53 )
-dest = Vector2( 954.923, 0 )
-dest2 = Vector2( 1600, 0 )
-initConvo = true
-speaker1 = ExtResource( 57 )
-speaker2 = ExtResource( 58 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart17/trainpart7/Enemy2"]
-position = Vector2( -49.7944, 47.933 )
-scale = Vector2( 1.2, 1.2 )
-frames = SubResource( 39 )
-frame = 5
-playing = true
-flip_h = true
-
 [node name="trainpart5" type="Sprite" parent="Train/Parts/trainpart17"]
-position = Vector2( -1434.89, -3.05176e-05 )
+position = Vector2( -1434.89, 0 )
 texture = ExtResource( 15 )
 
 [node name="Door2" type="Area2D" parent="Train/Parts/trainpart17/trainpart5"]
@@ -645,37 +627,23 @@ texture = ExtResource( 26 )
 doorNr = 3
 
 [node name="DoorShape" type="CollisionShape2D" parent="Train/Parts/trainpart17/trainpart5/Door2"]
-position = Vector2( -221.428, 46.0867 )
+position = Vector2( -211.363, 46.0864 )
 shape = SubResource( 4 )
 
+[node name="pile2" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
+position = Vector2( 72.4819, 47.9036 )
+texture = ExtResource( 46 )
+
 [node name="suitcase1" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
-position = Vector2( 8.62939, 81.912 )
+position = Vector2( 174.076, 82.8264 )
 texture = ExtResource( 43 )
 
-[node name="suitcase2" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
-position = Vector2( 191.879, 79.162 )
-texture = ExtResource( 42 )
-
 [node name="suitcase3" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
-position = Vector2( 178.629, 79.8011 )
+position = Vector2( 108.198, 32.8233 )
 texture = ExtResource( 42 )
 
-[node name="suitcase2" type="Sprite" parent="Train/Parts/trainpart17/trainpart5/suitcase3"]
-position = Vector2( -34, 0 )
-rotation = 0.523598
-texture = ExtResource( 42 )
-
-[node name="suitcase4" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
-position = Vector2( 165.129, 79.412 )
-texture = ExtResource( 42 )
-
-[node name="suitcase5" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
-position = Vector2( -5.37061, 34.162 )
-texture = ExtResource( 47 )
-
-[node name="suitcase6" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
-position = Vector2( 18.6294, 44.4121 )
-rotation = 1.57079
+[node name="suitcase2" type="Sprite" parent="Train/Parts/trainpart17/trainpart5"]
+position = Vector2( 119.31, 28.8548 )
 texture = ExtResource( 47 )
 
 [node name="trainpart6" type="Sprite" parent="Train/Parts/trainpart17"]
@@ -690,18 +658,54 @@ texture = ExtResource( 27 )
 position = Vector2( -2863.75, 0 )
 texture = ExtResource( 27 )
 
-[node name="ToiletDoor" type="Area2D" parent="Train/Parts/trainpart17"]
-script = ExtResource( 48 )
-
-[node name="DoorShape" type="CollisionShape2D" parent="Train/Parts/trainpart17/ToiletDoor"]
-position = Vector2( -9.36426, 24.6112 )
-shape = SubResource( 40 )
-
 [node name="light" type="Sprite" parent="Train/Parts/trainpart17"]
 visible = false
-position = Vector2( -9.36426, -77.9847 )
-texture = ExtResource( 49 )
-script = ExtResource( 50 )
+position = Vector2( -9.604, -77.7499 )
+texture = ExtResource( 48 )
+
+[node name="ToiletDoor" type="Area2D" parent="Train/Parts/trainpart17"]
+script = ExtResource( 49 )
+
+[node name="DoorShape" type="CollisionShape2D" parent="Train/Parts/trainpart17/ToiletDoor"]
+position = Vector2( -8.5, 23.4258 )
+shape = SubResource( 21 )
+
+[node name="Enemy1" type="KinematicBody2D" parent="Train/Parts/trainpart17"]
+visible = false
+position = Vector2( -746, 0 )
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+dest = Vector2( 20, 0 )
+dest2 = Vector2( 700, 0 )
+turn = true
+initConvo = true
+speaker1 = ExtResource( 56 )
+speaker2 = ExtResource( 57 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart17/Enemy1"]
+position = Vector2( 0, 47.933 )
+frames = SubResource( 22 )
+frame = 1
+playing = true
+flip_h = true
+
+[node name="Enemy2" type="KinematicBody2D" parent="Train/Parts/trainpart17"]
+visible = false
+position = Vector2( -852, -2.07419 )
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+dest = Vector2( -90, 0 )
+dest2 = Vector2( 700, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart17/Enemy2"]
+position = Vector2( 0, 49.323 )
+frames = SubResource( 43 )
+playing = true
+flip_h = true
 
 [node name="Player" type="RigidBody2D" parent="Train"]
 visible = false
@@ -726,80 +730,80 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Player"]
 position = Vector2( -2.61112, 2.41623 )
-shape = SubResource( 41 )
+shape = SubResource( 18 )
 
 [node name="PartsForeground" type="KinematicBody2D" parent="Train"]
+script = ExtResource( 9 )
+speed = 6000.0
+
+[node name="frame" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -1435.31, 320.264 )
+scale = Vector2( 1.91668, 1 )
+texture = ExtResource( 36 )
 
 [node name="frame2" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -3834.02, 333.151 )
-scale = Vector2( 1.95966, 1 )
+position = Vector2( -3834.22, 333.151 )
+scale = Vector2( 1.99221, 1 )
 texture = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/PartsForeground"]
 position = Vector2( 37.4177, -54.3448 )
-shape = SubResource( 42 )
+shape = SubResource( 19 )
 
 [node name="frame3" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -1435.38, 317 )
+position = Vector2( 1440.15, 286.871 )
 scale = Vector2( 1.94551, 1 )
 texture = ExtResource( 36 )
 
 [node name="frame4" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( 1438.16, 313.187 )
+position = Vector2( 1440.15, 286.871 )
 scale = Vector2( 1.94551, 1 )
 texture = ExtResource( 36 )
 
 [node name="pole front" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( 960.668, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
-
-[node name="pole front4" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -151.603, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
-
-[node name="pole front5" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -852, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
-
-[node name="pole front6" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -1727.36, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
-
-[node name="pole front7" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -2549.34, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
-
-[node name="pole front8" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -3424.7, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
-
-[node name="pole front9" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( -4604.54, 530 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
-offset = Vector2( -1690.34, -169.334 )
+position = Vector2( 1028.48, 333.582 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
 
 [node name="pole front2" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( 113.855, 321.888 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
+position = Vector2( 326.846, 331.693 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
 
 [node name="pole front3" type="Sprite" parent="Train/PartsForeground"]
-position = Vector2( 1043.73, 321.888 )
-scale = Vector2( 1, 1.229 )
-texture = ExtResource( 51 )
+position = Vector2( -262.874, 322.338 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
+
+[node name="pole front4" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -968.474, 310.471 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
+
+[node name="pole front5" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -1851.86, 331.693 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
+
+[node name="pole front6" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -2609.85, 331.693 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
+
+[node name="pole front7" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -3414.66, 331.693 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
+
+[node name="pole front8" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -4132.96, 334 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
+
+[node name="pole front9" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -7057.43, 331.693 )
+scale = Vector2( 2.01816, 1.12341 )
+texture = ExtResource( 50 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -808,16 +812,11 @@ autostart = true
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 12.3964
-margin_top = -4.84818
-margin_right = 12.3964
-margin_bottom = -4.84818
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="Control"]
-visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -836,7 +835,7 @@ margin_left = 10.0
 margin_top = 6.0
 margin_right = 73.0
 margin_bottom = 68.0
-custom_styles/panel = SubResource( 43 )
+custom_styles/panel = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -861,9 +860,8 @@ texture = ExtResource( 24 )
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/Panel"]
 margin_left = 74.0
 margin_top = 3.0
-margin_right = 678.0
+margin_right = 637.0
 margin_bottom = 61.0
-custom_fonts/bold_font = ExtResource( 21 )
 custom_fonts/normal_font = ExtResource( 21 )
 bbcode_enabled = true
 __meta__ = {
@@ -916,21 +914,6 @@ text = "Ratatatata
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Polygon2D2" type="Polygon2D" parent="."]
-visible = false
-position = Vector2( 1167, 848.46 )
-color = Color( 0, 0, 0, 0.741176 )
-offset = Vector2( -1162.62, -827.481 )
-polygon = PoolVector2Array( -60.6888, -345.074, 1478.14, -285.614, 1386, 980, -152, 951 )
-
-[node name="Polygon2D3" type="Polygon2D" parent="."]
-visible = false
-position = Vector2( 1196.79, 847.049 )
-scale = Vector2( 1.08076, 0.997759 )
-color = Color( 0.929412, 0.882353, 0.882353, 0.25098 )
-offset = Vector2( -1162.62, -827.481 )
-polygon = PoolVector2Array( 534.802, 198.026, 623.797, 200.145, 793.734, 423.205, 448.609, 424.932 )
 [connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Parts" method="_on_Blocker_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Control/Panel" method="_on_Blocker_body_entered"]

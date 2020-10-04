@@ -193,8 +193,8 @@ public class Char : Area2D
 
 	private void enableNpc()
 	{
-		Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = true;
-		Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Visible = false;
+		Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = false;
+		Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Visible = true;
 	}
 	
 
@@ -235,10 +235,17 @@ public class Char : Area2D
 					enableNpc();
 					break;
 				case 5:
+					GetNode<SignalManager>("/root/SignalManager").EmitSignal("BlockMovement");
+					Owner.GetNode<RichTextLabel>("Control/Panel/Panel/RichTextLabel").BbcodeText =
+						"Of course he did, he was going to hide somewhere. Hope i can find him in time";
+					enableMe();
+					break;
+				case 6:
 					GetNode<SignalManager>("/root/SignalManager").EmitSignal("UnBlockMovement");
 					Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = true;
 					Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Visible = false;
 					Owner.GetNode<Panel>("Control/Panel").Visible = false;
+					enableMe();
 					break;
 			}
 		}

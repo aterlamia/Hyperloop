@@ -87,6 +87,8 @@ public class Enemy : KinematicBody2D
 					Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Texture = speaker1;
 
 					FirstPoint = true;
+					GetNode<Enemy>("../Enemy2").FirstPoint = true;
+					GetNode<AnimatedSprite>("../Enemy2/AnimatedSprite").Animation = "default";
 					GetNode<Enemy>("../Enemy1").FirstPoint = true;
 					GetNode<AnimatedSprite>("AnimatedSprite").Animation = "default";
 					break;
