@@ -1,8 +1,25 @@
 using Godot;
 using System;
+using ld47;
+
 
 public class State : Node2D
 {
+
+	private Statetype state = 0;
+
+	public void AddState(Statetype statetype)
+	{
+		state = state | statetype;
+		
+		GD.Print(state);
+	}
+
+
+	public bool HasState(Statetype statetype)
+	{
+		return (state & statetype) != Statetype.NONE;
+	}
 	// Declare member variables here. Examples:
 	// private int a = 2;
 	// private string b = "text";

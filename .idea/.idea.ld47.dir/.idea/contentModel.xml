@@ -12,6 +12,8 @@
           </e>
         </e>
       </e>
+      <e p="Char.cs" t="Include" />
+      <e p="Door.cs" t="Include" />
       <e p="Panel.cs" t="Include" />
       <e p="ParallaxBackground.cs" t="Include" />
       <e p="ParallaxLayer.cs" t="Include" />
@@ -19,7 +21,9 @@
       <e p="Phone.cs" t="Include" />
       <e p="Player.cs" t="Include" />
       <e p="SignalManager.cs" t="Include" />
+      <e p="SpeakerStart.cs" t="Include" />
       <e p="State.cs" t="Include" />
+      <e p="Statetype.cs" t="Include" />
       <e p="Story.cs" t="Include" />
       <e p="Train.cs" t="Include" />
       <e p="ld47.csproj" t="IncludeRecursive" />

@@ -20,7 +20,17 @@ public class SignalManager : Node2D
 
 	[Signal]
 	public delegate void UnBlockMovement();
+
 	
+	[Signal]
+	public delegate void PhoneDone();
+	
+	[Signal]
+	public delegate void HideWarning();
+	
+	[Signal]
+	public delegate void ShowWarning();
+
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
 //  public override void _Process(float delta)
 //  {

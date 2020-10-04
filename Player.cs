@@ -1,5 +1,5 @@
 using Godot;
-using System;
+using ld47;
 
 public class Player : RigidBody2D
 {
@@ -8,6 +8,7 @@ public class Player : RigidBody2D
 	[Export] private float speed = 100;
 	private bool run = false;
 
+	private Sprite warning;
 	private AnimatedSprite animater;
 
 	private bool canMoveBackWards = true;
@@ -17,22 +18,35 @@ public class Player : RigidBody2D
 	private void _blockMovement()
 	{
 		this.canMove = false;
+		animater.Animation = "idle";
 	}
 
 	private void _unBlockMovement()
 	{
 		this.canMove = true;
 	}
-	
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		warning = GetNode<Sprite>("warning");
 		animater = GetNode<AnimatedSprite>("PAnimlayer");
 		GetNode<SignalManager>("/root/SignalManager").Connect("BlockMovement", this, "_blockMovement");
 		GetNode<SignalManager>("/root/SignalManager").Connect("UnBlockMovement", this, "_unBlockMovement");
+		GetNode<SignalManager>("/root/SignalManager").Connect("HideWarning", this, "_hideWarning");
+		GetNode<SignalManager>("/root/SignalManager").Connect("ShowWarning", this, "_showWarning");
 	}
 
+	private void _hideWarning()
+	{
+		warning.Visible = false;
+	}
 
+	private void _showWarning()
+	{
+		warning.Visible = true;
+	}
+	
 	public override void _Input(InputEvent inputEvent)
 	{
 		if (inputEvent.IsActionPressed("run"))
@@ -50,12 +64,12 @@ public class Player : RigidBody2D
 
 	public override void _PhysicsProcess(float delta)
 	{
-
 		if (canMove == false)
 		{
 			return;
 			;
 		}
+
 		velocity = new Vector2();
 		if (Input.IsActionPressed("ui_right"))
 		{
@@ -100,7 +114,7 @@ public class Player : RigidBody2D
 		{
 			animater.FlipH = true;
 		}
-		else
+		else if (velocity.x != 0)
 		{
 			animater.FlipH = false;
 		}
@@ -108,24 +122,42 @@ public class Player : RigidBody2D
 
 	private void _on_Area2D_body_exited(object body)
 	{
-		canMoveForward = true;
+		if (GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) == false)
+		{
+
+			canMoveForward = true;
+		}
+		else
+		{
+			canMoveForward = true;
+			warning.Visible = false;            
+		}
 	}
 
 	private void _on_Area2D_body_entered(object body)
 	{
-		canMoveForward = false;
+		if (GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) == false)
+		{
+			
+			canMoveForward = false;
+		}
+		else
+		{
+			canMoveForward = false;
+			warning.Visible = true;
+		}
 	}
 
 
 	private void _on_Phone_body_entered(object body)
 	{
-		GetNode<Sprite>("warning").Visible = true;
+		warning.Visible = true;
 	}
 
 
 	private void _on_Phone_body_exited(object body)
 	{
-		GetNode<Sprite>("warning").Visible = false;
+		warning.Visible = false;
 	}
 
 	private void _on_Blocker_body_entered(object body)
@@ -138,14 +170,11 @@ public class Player : RigidBody2D
 	{
 		canMoveBackWards = true;
 	}
-	
-	
+
 	private void _on_Phone_PhoneAwnserd()
 	{
-		GetNode<Sprite>("warning").Visible = false;
+		warning.Visible = false;
 		animater.Animation = "Phone";
 		this.canMove = false;
 	}
-
 }
-
