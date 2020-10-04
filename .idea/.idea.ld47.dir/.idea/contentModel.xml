@@ -16,7 +16,11 @@
       <e p="ParallaxBackground.cs" t="Include" />
       <e p="ParallaxLayer.cs" t="Include" />
       <e p="Parts.cs" t="Include" />
+      <e p="Phone.cs" t="Include" />
       <e p="Player.cs" t="Include" />
+      <e p="SignalManager.cs" t="Include" />
+      <e p="State.cs" t="Include" />
+      <e p="Story.cs" t="Include" />
       <e p="Train.cs" t="Include" />
       <e p="ld47.csproj" t="IncludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

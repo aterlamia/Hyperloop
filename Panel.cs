@@ -3,32 +3,30 @@ using System;
 
 public class Panel : Godot.Panel
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
 	}
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-private void _on_Door_body_entered(object body)
-{
-	// Replace with function body.
+	private void _on_Door_body_entered(object body)
+	{
+		GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "It seems this door is locked \n I cannot go further";
+		Visible = true;
+	}
+
+	private void _on_Door_body_exited(object body)
+	{
+		Visible = false;
+	}
+
+
+	private void _on_Blocker_body_entered(object body)
+	{
+		GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "The shot came from over there I better not go there";
+		Visible = true;
+	}
+
+	private void _on_Blocker_body_exited(object body)
+	{
+		Visible = false;
+	}
 }
-
-
-private void _on_Door_body_exited(object body)
-{
-	// Replace with function body.
-}
-
-}
-
-
