@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using ld47;
 
 public class Parts : KinematicBody2D
 {
@@ -99,16 +100,32 @@ public class Parts : KinematicBody2D
 	private void _on_Story_IntroFinished()
 	{
 		introFinished = true;
-		GD.Print("finished");
 	}
 
 	private void _on_Blocker_body_entered(object body)
 	{
-		canMoveBackWards = false;
+		if (GetNode<State>("/root/State").HasState(Statetype.SLEEP_TALK) == false)
+		{
+			canMoveBackWards = false;
+		}
 	}
 
 	private void _on_Blocker_body_exited(object body)
 	{
 		canMoveBackWards = true;
 	}
+	
+	private void _on_Door2_body_entered(object body)
+	{
+		
+		canMoveBackWards = false;
+	}
+
+
+	private void _on_Door2_body_exited(object body)
+	{
+		canMoveBackWards = true;
+	}
+
 }
+

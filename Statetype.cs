@@ -11,7 +11,7 @@ namespace ld47
         DOOR_OPENED = 2, //DONE
         //level2
         CORRECT_NPC_TALKED_TO = 4,
-        DOOR_2_OPENED = 8,
+        SLEEP_TALK = 8,
         //level3
         SPEAKER_FIRED = 16,
         HIDDEN = 32,

@@ -118,7 +118,7 @@ public class Char : Area2D
 				break;
 			case 8:
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("UnBlockMovement");
-				Owner.GetNode<Panel>("Control/Panel").Visible = true;
+				Owner.GetNode<Panel>("Control/Panel").Visible = false;
 				GetNode<State>("/root/State").AddState(Statetype.CORRECT_NPC_TALKED_TO);
 				GetParent<Sprite>().Hide();
 				GetNode<CollisionShape2D>("CharShape").Disabled = true;
@@ -200,12 +200,13 @@ public class Char : Area2D
 
 	private void ConvoSleep()
 	{
-		Owner.GetNode<Panel>("Control/Panel").Visible = true;
 		if (GetNode<State>("/root/State").HasState(Statetype.PHONE2_DONE))
 		{
+		
 			switch (dialogPos)
 			{
 				case 0:
+					Owner.GetNode<Panel>("Control/Panel").Visible = true;
 					GetNode<SignalManager>("/root/SignalManager").EmitSignal("BlockMovement");
 					enableNpc();
 					
@@ -237,15 +238,17 @@ public class Char : Area2D
 				case 5:
 					GetNode<SignalManager>("/root/SignalManager").EmitSignal("BlockMovement");
 					Owner.GetNode<RichTextLabel>("Control/Panel/Panel/RichTextLabel").BbcodeText =
-						"Of course he did, he was going to hide somewhere. Hope i can find him in time";
+						"Of course he did, he was going to hide somewhere. Hope i can find him in time [color=red](You need to find him yourself no handy indicator his time, press x where you think he is)[/color]";
 					enableMe();
 					break;
 				case 6:
+					enableMe();
 					GetNode<SignalManager>("/root/SignalManager").EmitSignal("UnBlockMovement");
+					GetNode<SignalManager>("/root/SignalManager").EmitSignal("ShowFeet");
 					Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = true;
 					Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Visible = false;
 					Owner.GetNode<Panel>("Control/Panel").Visible = false;
-					enableMe();
+					GetNode<State>("/root/State").AddState(Statetype.SLEEP_TALK);
 					break;
 			}
 		}

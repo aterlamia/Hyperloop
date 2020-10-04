@@ -34,7 +34,7 @@ public class Phone : Area2D
 			{
 				if (sedondTime == false)
 				{
-					this.EmitSignal("PhoneAwnserd", 1);
+					EmitSignal("PhoneAwnserd", 1);
 
 					GetNode<SignalManager>("/root/SignalManager").EmitSignal("BlockMovement");
 					GetNode<CollisionShape2D>("PhpneSHape").Disabled = true;

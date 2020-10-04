@@ -23,11 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d2c4c7-3a5c-40f6-9c1e-fc2d3701e1a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temp/skill-desc_0001_buildings.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Temp/skill-desc_0001_buildings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temp/skill-desc_0002_far-buildings.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Temp/skill-desc_0002_far-buildings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temp/skill-desc_0003_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Temp/skill-desc_0003_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/asepritefuiles/reversedb.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/asepritefuiles/reversedb.ase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/asepritefuiles/sutff.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/asepritefuiles/sutff.ase" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Char.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Char.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Panel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Parts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Phone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Statetype.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Statetype.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Story.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Story.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Train.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Train.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,17 +72,22 @@
         <option value="$PROJECT_DIR$/Train.cs" />
         <option value="$PROJECT_DIR$/State.cs" />
         <option value="$PROJECT_DIR$/SpeakerStart.cs" />
-        <option value="$PROJECT_DIR$/Door.cs" />
-        <option value="$PROJECT_DIR$/Statetype.cs" />
         <option value="$PROJECT_DIR$/light.cs" />
-        <option value="$PROJECT_DIR$/Panel.cs" />
-        <option value="$PROJECT_DIR$/SignalManager.cs" />
         <option value="$PROJECT_DIR$/ToiletDoor.cs" />
-        <option value="$PROJECT_DIR$/Phone.cs" />
-        <option value="$PROJECT_DIR$/Player.cs" />
-        <option value="$PROJECT_DIR$/Parts.cs" />
         <option value="$PROJECT_DIR$/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Statetype.cs" />
+        <option value="$PROJECT_DIR$/SignalManager.cs" />
+        <option value="$PROJECT_DIR$/Phone.cs" />
+        <option value="$PROJECT_DIR$/Door.cs" />
+        <option value="$PROJECT_DIR$/Panel.cs" />
+        <option value="$PROJECT_DIR$/EnemeyBlock.cs" />
+        <option value="$PROJECT_DIR$/bombe.cs" />
+        <option value="$PROJECT_DIR$/Chose.cs" />
+        <option value="$PROJECT_DIR$/Parts.cs" />
+        <option value="$PROJECT_DIR$/Player.cs" />
         <option value="$PROJECT_DIR$/Story.cs" />
+        <option value="$PROJECT_DIR$/.mono/assemblies/Debug/GodotSharp.xml" />
+        <option value="$PROJECT_DIR$/feet.cs" />
         <option value="$PROJECT_DIR$/Char.cs" />
       </list>
     </option>
@@ -130,7 +148,7 @@
       <workItem from="1601787948343" duration="15995000" />
       <workItem from="1601838120060" duration="3053000" />
       <workItem from="1601834064907" duration="504000" />
-      <workItem from="1601835569441" duration="1627000" />
+      <workItem from="1601835569441" duration="10808000" />
     </task>
     <servers />
   </component>
@@ -163,29 +181,29 @@
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="1703" y="852" width="424" height="482" key="FileChooserDialogImpl/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1601688363224" />
-    <state width="3790" height="603" key="GridCell.Tab.0.bottom" timestamp="1601838302794">
+    <state width="3790" height="603" key="GridCell.Tab.0.bottom" timestamp="1601850097268">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state width="3790" height="603" key="GridCell.Tab.0.bottom/0.28.3840.2132/3840.0.1920.1080/5760.0.1920.1080@0.28.3840.2132" timestamp="1601736002562" />
-    <state width="3790" height="603" key="GridCell.Tab.0.bottom/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838302794" />
+    <state width="3790" height="603" key="GridCell.Tab.0.bottom/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601850097268" />
     <state width="3790" height="615" key="GridCell.Tab.0.bottom/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1601691292651" />
-    <state width="3790" height="603" key="GridCell.Tab.0.center" timestamp="1601838302794">
+    <state width="3790" height="603" key="GridCell.Tab.0.center" timestamp="1601850097268">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state width="3790" height="603" key="GridCell.Tab.0.center/0.28.3840.2132/3840.0.1920.1080/5760.0.1920.1080@0.28.3840.2132" timestamp="1601736002562" />
-    <state width="3790" height="603" key="GridCell.Tab.0.center/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838302794" />
+    <state width="3790" height="603" key="GridCell.Tab.0.center/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601850097268" />
     <state width="3790" height="615" key="GridCell.Tab.0.center/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1601691292651" />
-    <state width="3790" height="603" key="GridCell.Tab.0.left" timestamp="1601838302794">
+    <state width="3790" height="603" key="GridCell.Tab.0.left" timestamp="1601850097268">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state width="3790" height="603" key="GridCell.Tab.0.left/0.28.3840.2132/3840.0.1920.1080/5760.0.1920.1080@0.28.3840.2132" timestamp="1601736002562" />
-    <state width="3790" height="603" key="GridCell.Tab.0.left/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838302794" />
+    <state width="3790" height="603" key="GridCell.Tab.0.left/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601850097268" />
     <state width="3790" height="615" key="GridCell.Tab.0.left/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1601691292651" />
-    <state width="3790" height="603" key="GridCell.Tab.0.right" timestamp="1601838302794">
+    <state width="3790" height="603" key="GridCell.Tab.0.right" timestamp="1601850097268">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state width="3790" height="603" key="GridCell.Tab.0.right/0.28.3840.2132/3840.0.1920.1080/5760.0.1920.1080@0.28.3840.2132" timestamp="1601736002562" />
-    <state width="3790" height="603" key="GridCell.Tab.0.right/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838302794" />
+    <state width="3790" height="603" key="GridCell.Tab.0.right/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601850097268" />
     <state width="3790" height="615" key="GridCell.Tab.0.right/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1601691292651" />
     <state width="3790" height="787" key="GridCell.Tab.1.bottom" timestamp="1601834567835">
       <screen x="0" y="28" width="3840" height="2132" />
@@ -283,29 +301,29 @@
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="100" y="128" width="3640" height="1932" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838099493" />
-    <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601838434163">
+    <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601841753856">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
-    <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838434163" />
-    <state x="1582" y="642" width="676" height="903" key="find.popup" timestamp="1601838053980">
+    <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601841753856" />
+    <state x="1582" y="642" width="676" height="903" key="find.popup" timestamp="1601846540207">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
-    <state x="1582" y="642" width="676" height="903" key="find.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838053980" />
+    <state x="1582" y="642" width="676" height="903" key="find.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601846540207" />
     <state x="1584" y="524" key="run.anything.popup" timestamp="1601838453374">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="1584" y="524" key="run.anything.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838453374" />
-    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup" timestamp="1601838667531">
+    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup" timestamp="1601849837491">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
-    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838667531" />
+    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601849837491" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Story.cs</url>
-          <line>29</line>
+          <line>25</line>
           <properties documentPath="$PROJECT_DIR$/Story.cs" initialLine="29">
             <startOffsets>
               <option value="689" />
@@ -318,7 +336,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Story.cs</url>
-          <line>27</line>
+          <line>23</line>
           <properties documentPath="$PROJECT_DIR$/Story.cs" initialLine="27">
             <startOffsets>
               <option value="601" />
@@ -331,20 +349,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Story.cs</url>
-          <line>39</line>
-          <properties documentPath="$PROJECT_DIR$/Story.cs" initialLine="38">
-            <startOffsets>
-              <option value="857" />
-            </startOffsets>
-            <endOffsets>
-              <option value="885" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Story.cs</url>
-          <line>38</line>
+          <line>33</line>
           <properties documentPath="$PROJECT_DIR$/Story.cs" initialLine="37">
             <startOffsets>
               <option value="828" />
@@ -357,7 +362,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Story.cs</url>
-          <line>46</line>
+          <line>34</line>
           <properties documentPath="$PROJECT_DIR$/Story.cs" initialLine="44">
             <startOffsets>
               <option value="990" />
@@ -367,19 +372,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Story.cs</url>
-          <line>45</line>
-          <properties documentPath="$PROJECT_DIR$/Story.cs" initialLine="43">
-            <startOffsets>
-              <option value="959" />
-            </startOffsets>
-            <endOffsets>
-              <option value="985" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

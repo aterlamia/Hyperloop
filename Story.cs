@@ -4,10 +4,6 @@ using ld47;
 
 public class Story : Node2D
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
 	[Signal]
 	public delegate void IntroFinished();
 
@@ -29,7 +25,6 @@ public class Story : Node2D
 		startTimer.Connect("timeout", this, "_timer_callback");
 		AddChild(startTimer);
 		startTimer.Start();
-		GD.Print("starTimerCalled");
 		currentPhonePos = 1;
 	}
 
@@ -37,16 +32,8 @@ public class Story : Node2D
 	{
 		switch (starTimerCalled)
 		{
-			case 0: //debug
-				EmitSignal("IntroFinished");
-				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
-				GetNode<State>("/root/State").AddState(Statetype.CORRECT_NPC_TALKED_TO);
-				GetNode<State>("/root/State").AddState(Statetype.DOOR3);
-				GetNode<RigidBody2D>("../Train/Player").Visible = true;
-				break;
 			case 4:
 			case 9:
-				GD.Print(starTimerCalled);
 				GetNode<Control>("action 1").Visible = true;
 				break;
 			case 5:
@@ -132,8 +119,8 @@ public class Story : Node2D
 
 	private void enablePhone()
 	{
-		Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = true;
-		Owner.GetNode<Sprite>("Control/Panel/Panel/portraitgirl").Visible = false;
+		Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = false;
+		Owner.GetNode<Sprite>("Control/Panel/Panel/portraitgirl").Visible = true;
 	}
 
 	private void SecondCall(int pos)
@@ -250,6 +237,7 @@ public class Story : Node2D
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("UnBlockMovement");
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("PhoneDone");
 				GetNode<State>("/root/State").AddState(Statetype.PHONE2_DONE);
+				Owner.GetNode<Panel>("Control/Panel").Visible = false;
 				break;
 		}
 	}

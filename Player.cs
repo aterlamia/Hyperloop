@@ -41,7 +41,6 @@ public class Player : RigidBody2D
 
 	private void _hidePlayer()
 	{
-		GD.Print("HIDE");
 		Visible = false;
 	}
 
@@ -172,7 +171,10 @@ public class Player : RigidBody2D
 
 	private void _on_Blocker_body_entered(object body)
 	{
-		canMoveBackWards = false;
+		if (GetNode<State>("/root/State").HasState(Statetype.SLEEP_TALK) == false)
+		{
+			canMoveBackWards = false;
+		}
 	}
 
 
@@ -187,4 +189,17 @@ public class Player : RigidBody2D
 		animater.Animation = "Phone";
 		this.canMove = false;
 	}
+
+	private void _on_Area2D_body_entered_alt()
+	{
+		canMoveBackWards = false;
+	}
+
+
+	private void _on_Area2D_body_exited_alt()
+	{
+		canMoveBackWards = true;
+	}
 }
+
+

@@ -27,8 +27,11 @@ public class SignalManager : Node2D
 	
 	[Signal]
 	public delegate void ShowWarning();
-	
-	
+
+
+	[Signal]
+	public delegate void ShowFeet();
+		
 	[Signal]
 	public delegate void HidePlayer();
 	
