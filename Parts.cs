@@ -10,13 +10,14 @@ public class Parts : KinematicBody2D
 	private bool canMoveForward = true;
 	private bool introFinished = false;
 	private bool canMoveBackWards = true;
-	private bool canMove = true;
+	private bool canMove = true; 
+	private KinematicBody2D upperlayer;
 
 	public override void _Ready()
 	{
-		GD.Print("sdsddsd");
 		GetNode<SignalManager>("/root/SignalManager").Connect("BlockMovement", this, "_blockMovement");
 		GetNode<SignalManager>("/root/SignalManager").Connect("UnBlockMovement", this, "_unBlockMovement");
+		upperlayer = GetNode<KinematicBody2D>("../PartsForeground");
 	}
 
 	private void _blockMovement()
@@ -79,8 +80,9 @@ public class Parts : KinematicBody2D
 			velocity.x = 0;
 		}
 
-		
+
 		MoveAndSlide(velocity * delta);
+		upperlayer.MoveAndSlide(velocity * delta);
 	}
 
 
@@ -102,11 +104,11 @@ public class Parts : KinematicBody2D
 
 	private void _on_Blocker_body_entered(object body)
 	{
-		canMoveBackWards= false;
+		canMoveBackWards = false;
 	}
 
 	private void _on_Blocker_body_exited(object body)
 	{
-		canMoveBackWards= true;
+		canMoveBackWards = true;
 	}
 }

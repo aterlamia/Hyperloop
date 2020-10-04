@@ -35,6 +35,19 @@ public class Player : RigidBody2D
 		GetNode<SignalManager>("/root/SignalManager").Connect("UnBlockMovement", this, "_unBlockMovement");
 		GetNode<SignalManager>("/root/SignalManager").Connect("HideWarning", this, "_hideWarning");
 		GetNode<SignalManager>("/root/SignalManager").Connect("ShowWarning", this, "_showWarning");
+		GetNode<SignalManager>("/root/SignalManager").Connect("HidePlayer", this, "_hidePlayer");
+		GetNode<SignalManager>("/root/SignalManager").Connect("UnhidePlayer", this, "_showPlayer");
+	}
+
+	private void _hidePlayer()
+	{
+		GD.Print("HIDE");
+		Visible = false;
+	}
+
+	private void _showPlayer()
+	{
+		Visible = true;
 	}
 
 	private void _hideWarning()
@@ -46,7 +59,7 @@ public class Player : RigidBody2D
 	{
 		warning.Visible = true;
 	}
-	
+
 	public override void _Input(InputEvent inputEvent)
 	{
 		if (inputEvent.IsActionPressed("run"))
@@ -67,7 +80,6 @@ public class Player : RigidBody2D
 		if (canMove == false)
 		{
 			return;
-			;
 		}
 
 		velocity = new Vector2();
@@ -124,13 +136,12 @@ public class Player : RigidBody2D
 	{
 		if (GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) == false)
 		{
-
 			canMoveForward = true;
 		}
 		else
 		{
 			canMoveForward = true;
-			warning.Visible = false;            
+			warning.Visible = false;
 		}
 	}
 
@@ -138,7 +149,6 @@ public class Player : RigidBody2D
 	{
 		if (GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) == false)
 		{
-			
 			canMoveForward = false;
 		}
 		else
@@ -171,7 +181,7 @@ public class Player : RigidBody2D
 		canMoveBackWards = true;
 	}
 
-	private void _on_Phone_PhoneAwnserd()
+	private void _on_Phone_PhoneAwnserd(int test)
 	{
 		warning.Visible = false;
 		animater.Animation = "Phone";

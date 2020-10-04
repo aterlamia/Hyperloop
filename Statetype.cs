@@ -23,5 +23,6 @@ namespace ld47
         PANEL_OPENED = 512,
         // END ?
         BOMB_DEFUSED = 1024,
+        DOOR3 = 2048,
     }
 }

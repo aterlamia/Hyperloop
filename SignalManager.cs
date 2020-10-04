@@ -13,14 +13,11 @@ public class SignalManager : Node2D
 		
 	}
 
-	
-	
 	[Signal]
 	public delegate void BlockMovement();
 
 	[Signal]
 	public delegate void UnBlockMovement();
-
 	
 	[Signal]
 	public delegate void PhoneDone();
@@ -30,6 +27,24 @@ public class SignalManager : Node2D
 	
 	[Signal]
 	public delegate void ShowWarning();
+	
+	
+	[Signal]
+	public delegate void HidePlayer();
+	
+	[Signal]
+	public delegate void UnhidePlayer();
+	
+	
+	[Signal]
+	public delegate void ActivateToilet();
+
+	[Signal]
+	public delegate void Hide();
+
+	[Signal]
+	public delegate void DisableToilet();
+
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
 //  public override void _Process(float delta)
