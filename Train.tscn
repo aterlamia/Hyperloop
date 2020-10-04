@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Assets/trainpart.png" type="Texture" id=1]
 [ext_resource path="res://Train.cs" type="Script" id=2]
@@ -24,12 +24,29 @@
 [ext_resource path="res://Story.cs" type="Script" id=22]
 [ext_resource path="res://Phone.cs" type="Script" id=23]
 [ext_resource path="res://Assets/portraitgirl.png" type="Texture" id=24]
+[ext_resource path="res://Door.cs" type="Script" id=25]
+[ext_resource path="res://Assets/trainpart5b.png" type="Texture" id=26]
+[ext_resource path="res://Assets/trainpart7.png" type="Texture" id=27]
+[ext_resource path="res://Assets/trainpart6.png" type="Texture" id=28]
+[ext_resource path="res://Char.cs" type="Script" id=29]
+[ext_resource path="res://Assets/alt char sitting2.png" type="Texture" id=30]
+[ext_resource path="res://Assets/alt char itting3.png" type="Texture" id=31]
+[ext_resource path="res://Assets/alt char sitting.png" type="Texture" id=32]
+[ext_resource path="res://Assets/portraitnpc3.png" type="Texture" id=33]
+[ext_resource path="res://Assets/portraitnpc1.png" type="Texture" id=34]
+[ext_resource path="res://Assets/portraitnpc2.png" type="Texture" id=35]
+[ext_resource path="res://Assets/frame.png" type="Texture" id=36]
+[ext_resource path="res://Assets/trainpart8.png" type="Texture" id=37]
+[ext_resource path="res://Assets/trainpart9.png" type="Texture" id=38]
+[ext_resource path="res://Assets/speaker.png" type="Texture" id=39]
+[ext_resource path="res://SpeakerStart.cs" type="Script" id=40]
+[ext_resource path="res://justspeaker1.png" type="Texture" id=41]
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 162.133 )
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -65,11 +82,45 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=11]
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 39 )
+region = Rect2( 0, 0, 40, 23 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 39 )
+region = Rect2( 40, 0, 40, 23 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 39 )
+region = Rect2( 80, 0, 40, 23 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 39 )
+region = Rect2( 120, 0, 40, 23 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=21]
+
+[sub_resource type="CapsuleShape2D" id=12]
 radius = 19.4085
 height = 113.188
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="CapsuleShape2D" id=15]
+
+[sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.6, 0.6, 0.6, 0.309804 )
 
 [node name="Node2D" type="Node2D"]
@@ -81,7 +132,6 @@ position = Vector2( 1671.44, 574.599 )
 scale = Vector2( 2.19955, 1 )
 frames = ExtResource( 3 )
 animation = "blur"
-frame = 2
 speed_scale = 3.0
 playing = true
 offset = Vector2( -514.265, -246.007 )
@@ -90,7 +140,8 @@ offset = Vector2( -514.265, -246.007 )
 script = ExtResource( 11 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="background/ParallaxBackground"]
-material = SubResource( 3 )
+material = SubResource( 1 )
+motion_offset = Vector2( 4.2274e+06, 0 )
 motion_mirroring = Vector2( 272, 0 )
 script = ExtResource( 12 )
 speed = 3.0
@@ -101,8 +152,8 @@ scale = Vector2( 3.78902, 4.76154 )
 texture = ExtResource( 10 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="background/ParallaxBackground"]
-material = SubResource( 3 )
-motion_offset = Vector2( 8.50644e+06, 0 )
+material = SubResource( 1 )
+motion_offset = Vector2( 1.97795e+07, 0 )
 motion_mirroring = Vector2( 1704, 0 )
 script = ExtResource( 12 )
 speed = 8.0
@@ -116,9 +167,9 @@ position = Vector2( 0.00012207, 149.68 )
 texture = ExtResource( 13 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="background/ParallaxBackground"]
-material = SubResource( 3 )
+material = SubResource( 1 )
 position = Vector2( 851.533, 142.278 )
-motion_offset = Vector2( 1.2103e+07, 0 )
+motion_offset = Vector2( 2.90125e+07, 0 )
 motion_mirroring = Vector2( 1704, 0 )
 script = ExtResource( 12 )
 speed = 12.0
@@ -157,12 +208,20 @@ offset = Vector2( 869.146, 484.337 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Parts/trainpart2/Blocker"]
 position = Vector2( 1092.63, 494.904 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="trainpart3" type="Sprite" parent="Train/Parts"]
-position = Vector2( 330.975, -162.935 )
+position = Vector2( 1808.85, 667.276 )
 texture = ExtResource( 1 )
 offset = Vector2( 869.146, 484.337 )
+
+[node name="trainpart5" type="Sprite" parent="Train/Parts/trainpart3"]
+position = Vector2( -130.693, -344.938 )
+texture = ExtResource( 15 )
+
+[node name="trainpart6" type="Sprite" parent="Train/Parts/trainpart3/trainpart5"]
+position = Vector2( -478.002, 0 )
+texture = ExtResource( 28 )
 
 [node name="trainpart4" type="Sprite" parent="Train/Parts"]
 position = Vector2( 2158.66, 321.24 )
@@ -177,7 +236,7 @@ position = Vector2( 516.427, 369.971 )
 texture = ExtResource( 20 )
 
 [node name="trainpart6" type="Sprite" parent="Train/Parts"]
-position = Vector2( 1679.48, 321.402 )
+position = Vector2( 2308.86, 668.46 )
 texture = ExtResource( 7 )
 
 [node name="trainpart7" type="Sprite" parent="Train/Parts"]
@@ -194,8 +253,11 @@ texture = ExtResource( 15 )
 
 [node name="Door" type="Area2D" parent="Train/Parts/trainpart9"]
 position = Vector2( 14.4893, -10.0793 )
+script = ExtResource( 25 )
+texture = ExtResource( 26 )
+doorNr = 1
 
-[node name="DoorShaope" type="CollisionShape2D" parent="Train/Parts/trainpart9/Door"]
+[node name="DoorShape" type="CollisionShape2D" parent="Train/Parts/trainpart9/Door"]
 position = Vector2( -221.428, 46.0867 )
 shape = SubResource( 4 )
 
@@ -209,8 +271,148 @@ shape = SubResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart9/Phone"]
 position = Vector2( -115.979, 17.4258 )
 frames = SubResource( 10 )
+frame = 1
+playing = true
+
+[node name="trainpart10" type="Sprite" parent="Train/Parts"]
+position = Vector2( -1675.31, 322.338 )
+texture = ExtResource( 28 )
+
+[node name="trainpart11" type="Sprite" parent="Train/Parts"]
+position = Vector2( -2155.06, 322.338 )
+texture = ExtResource( 7 )
+
+[node name="alt char sitting2" type="Sprite" parent="Train/Parts/trainpart11"]
+position = Vector2( -202.314, 48.2052 )
+texture = ExtResource( 30 )
+
+[node name="Char" type="Area2D" parent="Train/Parts/trainpart11/alt char sitting2"]
+script = ExtResource( 29 )
+userId = 1
+texture = ExtResource( 35 )
+
+[node name="CharShape" type="CollisionShape2D" parent="Train/Parts/trainpart11/alt char sitting2/Char"]
+shape = SubResource( 11 )
+
+[node name="alt char sitting" type="Sprite" parent="Train/Parts/trainpart11"]
+position = Vector2( 185.535, 50.3492 )
+texture = ExtResource( 32 )
+
+[node name="Char2" type="Area2D" parent="Train/Parts/trainpart11/alt char sitting"]
+script = ExtResource( 29 )
+userId = 2
+texture = ExtResource( 34 )
+
+[node name="CharShape" type="CollisionShape2D" parent="Train/Parts/trainpart11/alt char sitting/Char2"]
+shape = SubResource( 11 )
+
+[node name="trainpart12" type="Sprite" parent="Train/Parts"]
+position = Vector2( -3114.24, 322.338 )
+texture = ExtResource( 27 )
+
+[node name="alt char itting3" type="Sprite" parent="Train/Parts/trainpart12"]
+position = Vector2( -81.3047, 47.933 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 31 )
+
+[node name="Char3" type="Area2D" parent="Train/Parts/trainpart12/alt char itting3"]
+position = Vector2( 0, 0.272 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+script = ExtResource( 29 )
+userId = 3
+texture = ExtResource( 33 )
+
+[node name="CharShape" type="CollisionShape2D" parent="Train/Parts/trainpart12/alt char itting3/Char3"]
+shape = SubResource( 11 )
+
+[node name="trainpart13" type="Sprite" parent="Train/Parts"]
+position = Vector2( -2634.32, 322.338 )
+texture = ExtResource( 27 )
+
+[node name="trainpart14" type="Sprite" parent="Train/Parts"]
+position = Vector2( -3594.05, 322.338 )
+texture = ExtResource( 15 )
+
+[node name="Door2" type="Area2D" parent="Train/Parts/trainpart14"]
+position = Vector2( 0, -10.079 )
+script = ExtResource( 25 )
+texture = ExtResource( 37 )
+doorNr = 2
+
+[node name="DoorShape" type="CollisionShape2D" parent="Train/Parts/trainpart14/Door2"]
+position = Vector2( -221.428, 46.0867 )
+shape = SubResource( 4 )
+one_way_collision_margin = 2.0
+
+[node name="trainpart16" type="Sprite" parent="Train/Parts"]
+position = Vector2( -4552.78, 322.442 )
+texture = ExtResource( 7 )
+
+[node name="trainpart15" type="Sprite" parent="Train/Parts"]
+position = Vector2( -4073.64, 322.338 )
+texture = ExtResource( 28 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart15"]
+visible = false
+position = Vector2( 46.2354, -37.9452 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 20 )
 frame = 2
 playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Train/Parts/trainpart15"]
+visible = false
+position = Vector2( -525.085, -37.9611 )
+frames = SubResource( 20 )
+frame = 2
+playing = true
+
+[node name="SpeakerStart" type="Area2D" parent="Train/Parts/trainpart15"]
+script = ExtResource( 40 )
+texture = ExtResource( 41 )
+
+[node name="SpeakerSHape" type="CollisionShape2D" parent="Train/Parts/trainpart15/SpeakerStart"]
+position = Vector2( -96.7476, 10.813 )
+shape = SubResource( 21 )
+
+[node name="trainpart17" type="Sprite" parent="Train/Parts"]
+position = Vector2( -5031.74, 322.338 )
+texture = ExtResource( 38 )
+
+[node name="trainpart3" type="Sprite" parent="Train/Parts/trainpart17"]
+position = Vector2( -476.221, 0 )
+texture = ExtResource( 8 )
+
+[node name="trainpart7" type="Sprite" parent="Train/Parts/trainpart17"]
+position = Vector2( -955.787, 0 )
+texture = ExtResource( 27 )
+
+[node name="trainpart5" type="Sprite" parent="Train/Parts/trainpart17"]
+position = Vector2( -1434.89, 0 )
+texture = ExtResource( 15 )
+
+[node name="Door2" type="Area2D" parent="Train/Parts/trainpart17/trainpart5"]
+position = Vector2( 0, -10.079 )
+script = ExtResource( 25 )
+texture = ExtResource( 26 )
+doorNr = 3
+
+[node name="DoorShape" type="CollisionShape2D" parent="Train/Parts/trainpart17/trainpart5/Door2"]
+position = Vector2( -221.428, 46.0867 )
+shape = SubResource( 4 )
+
+[node name="trainpart6" type="Sprite" parent="Train/Parts/trainpart17"]
+position = Vector2( -1912.29, 0 )
+texture = ExtResource( 28 )
+
+[node name="trainpart8" type="Sprite" parent="Train/Parts/trainpart17"]
+position = Vector2( -2386.92, 0 )
+texture = ExtResource( 27 )
+
+[node name="trainpart9" type="Sprite" parent="Train/Parts/trainpart17"]
+position = Vector2( -2863.75, 0 )
+texture = ExtResource( 27 )
 
 [node name="Player" type="RigidBody2D" parent="Train"]
 visible = false
@@ -235,7 +437,36 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Player"]
 position = Vector2( -2.61112, 2.41623 )
-shape = SubResource( 1 )
+shape = SubResource( 12 )
+
+[node name="PartsForeground" type="KinematicBody2D" parent="Train"]
+visible = false
+script = ExtResource( 9 )
+speed = 6000.0
+
+[node name="frame" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( 279.41, 322.338 )
+scale = Vector2( 1.91668, 1 )
+texture = ExtResource( 36 )
+
+[node name="frame2" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( -3850.64, 333.151 )
+scale = Vector2( 4.72917, 1 )
+texture = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Train/PartsForeground"]
+position = Vector2( 37.4177, -54.3448 )
+shape = SubResource( 15 )
+
+[node name="frame3" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( 1440.15, 286.871 )
+scale = Vector2( 1.94551, 1 )
+texture = ExtResource( 36 )
+
+[node name="frame4" type="Sprite" parent="Train/PartsForeground"]
+position = Vector2( 1440.15, 286.871 )
+scale = Vector2( 1.94551, 1 )
+texture = ExtResource( 36 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -268,7 +499,7 @@ margin_left = 10.0
 margin_top = 6.0
 margin_right = 73.0
 margin_bottom = 68.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -279,6 +510,12 @@ scale = Vector2( 1.41272, 1.36573 )
 texture = ExtResource( 18 )
 
 [node name="portraitgirl" type="Sprite" parent="Control/Panel/Panel"]
+visible = false
+position = Vector2( 32.1842, 27.4155 )
+scale = Vector2( 1.23263, 1.31041 )
+texture = ExtResource( 24 )
+
+[node name="portraitnpc" type="Sprite" parent="Control/Panel/Panel"]
 visible = false
 position = Vector2( 32.1842, 27.4155 )
 scale = Vector2( 1.23263, 1.31041 )
@@ -350,7 +587,7 @@ __meta__ = {
 [connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Control/Panel" method="_on_Blocker_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_entered" binds= [ 1 ]]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_exited"]
@@ -358,6 +595,25 @@ __meta__ = {
 [connection signal="PhoneAwnserd" from="Train/Parts/trainpart9/Phone" to="Story" method="_on_Phone_PhoneAwnserd"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_entered"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart11/alt char sitting2/Char" to="Train/Parts/trainpart11/alt char sitting2/Char" method="_on_Char_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart11/alt char sitting2/Char" to="Train/Parts/trainpart11/alt char sitting2/Char" method="_on_Char_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart11/alt char sitting/Char2" to="Train/Parts/trainpart11/alt char sitting/Char2" method="_on_Char_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart11/alt char sitting/Char2" to="Train/Parts/trainpart11/alt char sitting/Char2" method="_on_Char_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart12/alt char itting3/Char3" to="Train/Parts/trainpart12/alt char itting3/Char3" method="_on_Char_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart12/alt char itting3/Char3" to="Train/Parts/trainpart12/alt char itting3/Char3" method="_on_Char_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Train/Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Control/Panel" method="_on_Door_body_entered" binds= [ 2 ]]
+[connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Train/Parts" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Train/Player" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Control/Panel" method="_on_Door_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart15/SpeakerStart" to="Train/Parts/trainpart15/SpeakerStart" method="_on_SpeakerStart_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Control/Panel" method="_on_Door_body_entered" binds= [ 1 ]]
+[connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Parts" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Player" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Control/Panel" method="_on_Door_body_exited"]
 [connection signal="body_entered" from="Train/Player" to="Train/Parts" method="_on_Player_body_entered"]
 [connection signal="timeout" from="Timer" to="Train" method="_on_Timer_timeout"]
 [connection signal="IntroFinished" from="Story" to="Train/Parts" method="_on_Story_IntroFinished"]

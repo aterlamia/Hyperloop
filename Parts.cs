@@ -14,6 +14,7 @@ public class Parts : KinematicBody2D
 
 	public override void _Ready()
 	{
+		GD.Print("sdsddsd");
 		GetNode<SignalManager>("/root/SignalManager").Connect("BlockMovement", this, "_blockMovement");
 		GetNode<SignalManager>("/root/SignalManager").Connect("UnBlockMovement", this, "_unBlockMovement");
 	}
@@ -82,11 +83,6 @@ public class Parts : KinematicBody2D
 		MoveAndSlide(velocity * delta);
 	}
 
-	private void _on_Player_body_entered(object body)
-	{
-		GD.Print(body);
-		GD.Print("ent");
-	}
 
 	private void _on_Area2D_body_exited(object body)
 	{
@@ -101,6 +97,7 @@ public class Parts : KinematicBody2D
 	private void _on_Story_IntroFinished()
 	{
 		introFinished = true;
+		GD.Print("finished");
 	}
 
 	private void _on_Blocker_body_entered(object body)

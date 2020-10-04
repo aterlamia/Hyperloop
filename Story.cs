@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using ld47;
 
 public class Story : Node2D
 {
@@ -35,6 +36,12 @@ public class Story : Node2D
 	{
 		switch (starTimerCalled)
 		{
+			case 0 : //debug
+				this.EmitSignal("IntroFinished");
+				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
+				GetNode<State>("/root/State").AddState(Statetype.CORRECT_NPC_TALKED_TO);
+				GetNode<RigidBody2D>("../Train/Player").Visible = true;
+				break;
 			case 4:
 			case 9:
 				GetNode<Control>("action 1").Visible = true;
@@ -184,6 +191,8 @@ public class Story : Node2D
 				Owner.GetNode<Panel>("Control/Panel").Visible = true;
 				inPhoneCall = false;
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("UnBlockMovement");
+				GetNode<SignalManager>("/root/SignalManager").EmitSignal("PhoneDone");
+				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
 				break;
 		}
 	}

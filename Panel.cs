@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using ld47;
 
 public class Panel : Godot.Panel
 {
@@ -7,10 +8,19 @@ public class Panel : Godot.Panel
 	{
 	}
 
-	private void _on_Door_body_entered(object body)
+	private void _on_Door_body_entered(object body, int door)
 	{
-		GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "It seems this door is locked \n I cannot go further";
-		Visible = true;
+		if (GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) == false && door == 1)
+		{
+			GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "It seems this door is locked \n I cannot go further";
+			Visible = true;
+		}
+
+		if (GetNode<State>("/root/State").HasState(Statetype.CORRECT_NPC_TALKED_TO) == false && door == 2)
+		{
+			GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "It seems this door is locked \n I cannot go further, lets look around";
+			Visible = true;
+		}
 	}
 
 	private void _on_Door_body_exited(object body)
