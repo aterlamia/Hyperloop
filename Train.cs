@@ -22,10 +22,8 @@ public class Train : Node2D
 
 	private void _on_Timer_timeout()
 	{
-		GD.Print("bump");
 		bump = true;
 		down = false;
-		// Replace with function body.
 	}
 
 

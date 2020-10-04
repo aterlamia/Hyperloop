@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Assets/trainpart.png" type="Texture" id=1]
 [ext_resource path="res://Train.cs" type="Script" id=2]
@@ -19,10 +19,18 @@
 [ext_resource path="res://Assets/phone.png" type="Texture" id=17]
 [ext_resource path="res://Assets/portrait.png" type="Texture" id=18]
 [ext_resource path="res://Panel.cs" type="Script" id=19]
+[ext_resource path="res://Assets/maincharsit.png" type="Texture" id=20]
+[ext_resource path="res://text.tres" type="DynamicFont" id=21]
+[ext_resource path="res://Story.cs" type="Script" id=22]
+[ext_resource path="res://Phone.cs" type="Script" id=23]
+[ext_resource path="res://Assets/portraitgirl.png" type="Texture" id=24]
 
 [sub_resource type="CanvasItemMaterial" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 10, 162.133 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 139.599 )
@@ -58,18 +66,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 15.4408
-height = 86.0355
+radius = 19.4085
+height = 113.188
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.6, 0.6, 0.6, 0.309804 )
-
-[sub_resource type="DynamicFontData" id=12]
-font_path = "res://Assets/fonts/Pixel.ttf"
-
-[sub_resource type="DynamicFont" id=13]
-size = 13
-font_data = SubResource( 12 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -80,6 +81,7 @@ position = Vector2( 1671.44, 574.599 )
 scale = Vector2( 2.19955, 1 )
 frames = ExtResource( 3 )
 animation = "blur"
+frame = 2
 speed_scale = 3.0
 playing = true
 offset = Vector2( -514.265, -246.007 )
@@ -91,7 +93,7 @@ script = ExtResource( 11 )
 material = SubResource( 3 )
 motion_mirroring = Vector2( 272, 0 )
 script = ExtResource( 12 )
-speed = 2.0
+speed = 3.0
 
 [node name="skill-desc_0003_bg" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer"]
 position = Vector2( 513.17, 376.075 )
@@ -100,11 +102,10 @@ texture = ExtResource( 10 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="background/ParallaxBackground"]
 material = SubResource( 3 )
-position = Vector2( 851.533, 142.278 )
-motion_offset = Vector2( 3.12679e+06, 0 )
+motion_offset = Vector2( 8.50644e+06, 0 )
 motion_mirroring = Vector2( 1704, 0 )
 script = ExtResource( 12 )
-speed = 5.0
+speed = 8.0
 
 [node name="skill-desc_0002_far-buildings" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer2"]
 position = Vector2( 1.68188, -20.1815 )
@@ -117,10 +118,10 @@ texture = ExtResource( 13 )
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="background/ParallaxBackground"]
 material = SubResource( 3 )
 position = Vector2( 851.533, 142.278 )
-motion_offset = Vector2( 4.03628e+06, 0 )
+motion_offset = Vector2( 1.2103e+07, 0 )
 motion_mirroring = Vector2( 1704, 0 )
 script = ExtResource( 12 )
-speed = 7.0
+speed = 12.0
 
 [node name="skill-desc_0001_buildings" type="Sprite" parent="background/ParallaxBackground/ParallaxLayer3"]
 position = Vector2( -13.322, 93.8459 )
@@ -152,6 +153,12 @@ position = Vector2( -148.766, -161.753 )
 texture = ExtResource( 1 )
 offset = Vector2( 869.146, 484.337 )
 
+[node name="Blocker" type="Area2D" parent="Train/Parts/trainpart2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Parts/trainpart2/Blocker"]
+position = Vector2( 1092.63, 494.904 )
+shape = SubResource( 12 )
+
 [node name="trainpart3" type="Sprite" parent="Train/Parts"]
 position = Vector2( 330.975, -162.935 )
 texture = ExtResource( 1 )
@@ -164,6 +171,10 @@ texture = ExtResource( 6 )
 [node name="trainpart5" type="Sprite" parent="Train/Parts"]
 position = Vector2( 2635.1, 321.066 )
 texture = ExtResource( 8 )
+
+[node name="maincharsit" type="Sprite" parent="Train/Parts"]
+position = Vector2( 516.427, 369.971 )
+texture = ExtResource( 20 )
 
 [node name="trainpart6" type="Sprite" parent="Train/Parts"]
 position = Vector2( 1679.48, 321.402 )
@@ -189,6 +200,7 @@ position = Vector2( -221.428, 46.0867 )
 shape = SubResource( 4 )
 
 [node name="Phone" type="Area2D" parent="Train/Parts/trainpart9"]
+script = ExtResource( 23 )
 
 [node name="PhpneSHape" type="CollisionShape2D" parent="Train/Parts/trainpart9/Phone"]
 position = Vector2( -116.131, 18.6877 )
@@ -201,6 +213,7 @@ frame = 2
 playing = true
 
 [node name="Player" type="RigidBody2D" parent="Train"]
+visible = false
 position = Vector2( 488.713, 370.271 )
 mode = 2
 gravity_scale = 0.0
@@ -215,8 +228,9 @@ texture = ExtResource( 16 )
 
 [node name="PAnimlayer" type="AnimatedSprite" parent="Train/Player"]
 position = Vector2( 0, 6 )
+scale = Vector2( 1.2, 1.2 )
 frames = ExtResource( 4 )
-animation = "idle"
+animation = "Phone"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/Player"]
@@ -264,24 +278,86 @@ position = Vector2( 36.7003, 26.4506 )
 scale = Vector2( 1.41272, 1.36573 )
 texture = ExtResource( 18 )
 
+[node name="portraitgirl" type="Sprite" parent="Control/Panel/Panel"]
+visible = false
+position = Vector2( 32.1842, 27.4155 )
+scale = Vector2( 1.23263, 1.31041 )
+texture = ExtResource( 24 )
+
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/Panel"]
 margin_left = 73.8141
 margin_top = 3.1748
 margin_right = 507.814
 margin_bottom = 43.1748
-custom_fonts/normal_font = SubResource( 13 )
+custom_fonts/normal_font = ExtResource( 21 )
 text = "I can't go in there
 It seems to be locked"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Story" type="Node2D" parent="."]
+script = ExtResource( 22 )
+
+[node name="action 1" type="RichTextLabel" parent="Story"]
+visible = false
+margin_left = 941.257
+margin_top = 193.097
+margin_right = 1044.26
+margin_bottom = 244.097
+rect_rotation = 15.0
+rect_pivot_offset = Vector2( 77.397, 39.9915 )
+custom_fonts/normal_font = ExtResource( 21 )
+text = "BANG 
+          BANG"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action 2" type="RichTextLabel" parent="Story"]
+visible = false
+margin_left = 913.311
+margin_top = 286.871
+margin_right = 1016.31
+margin_bottom = 337.871
+rect_rotation = -15.0
+rect_pivot_offset = Vector2( 77.397, 39.9915 )
+custom_fonts/normal_font = ExtResource( 21 )
+text = "BAng"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action 3" type="RichTextLabel" parent="Story"]
+visible = false
+margin_left = 919.257
+margin_top = 244.827
+margin_right = 1022.26
+margin_bottom = 295.827
+rect_rotation = -15.0
+rect_pivot_offset = Vector2( 77.397, 39.9915 )
+custom_fonts/normal_font = ExtResource( 21 )
+text = "Ratatatata
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Parts" method="_on_Blocker_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Control/Panel" method="_on_Blocker_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Train/Parts" method="_on_Blocker_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Control/Panel" method="_on_Blocker_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_entered"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_exited"]
+[connection signal="PhoneAwnserd" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_PhoneAwnserd"]
+[connection signal="PhoneAwnserd" from="Train/Parts/trainpart9/Phone" to="Story" method="_on_Phone_PhoneAwnserd"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_entered"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_exited"]
 [connection signal="body_entered" from="Train/Player" to="Train/Parts" method="_on_Player_body_entered"]
 [connection signal="timeout" from="Timer" to="Train" method="_on_Timer_timeout"]
+[connection signal="IntroFinished" from="Story" to="Train/Parts" method="_on_Story_IntroFinished"]
