@@ -1,3 +1,4 @@
+using System;
 using Godot;
 using ld47;
 
@@ -9,8 +10,7 @@ public class Panel : Godot.Panel
 
 	private void _on_Door_body_entered(object body, int door)
 	{
-		GD.Print(door);
-		GD.Print(GetNode<State>("/root/State").GetState());
+		
 		if (GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) == false && door == 1)
 		{
 			GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "It seems this door is locked \n I cannot go further";
@@ -37,7 +37,7 @@ public class Panel : Godot.Panel
 				"I better get to the fucking bomb i have no time for this";
 			Visible = true;
 			GetNode<State>("/root/State").AddState(Statetype.DOOR3);
-		} else if (GetNode<State>("/root/State").HasState(Statetype.HIDDEN) && door == 3)
+		} else if (GetNode<State>("/root/State").HasState(Statetype.HIDDEN) && GetNode<State>("/root/State").HasState(Statetype.PHONE2_DONE) == false && door == 3)
 		{
 			GetNode<RichTextLabel>("Panel/RichTextLabel").BbcodeText =
 				"Let's go back first i have some information for [color=blue][b]Diane[/b][/color]";
@@ -45,13 +45,6 @@ public class Panel : Godot.Panel
 			GetNode<State>("/root/State").AddState(Statetype.DOOR3);
 		}
 
-		if (GetNode<State>("/root/State").HasState(Statetype.HIDDEN) && door == 3)
-		{
-			GetNode<RichTextLabel>("Panel/RichTextLabel").BbcodeText =
-				"Let's go back first i have some information for [color=blue][b]Diane[/b][/color]";
-			Visible = true;
-			GetNode<State>("/root/State").AddState(Statetype.DOOR3);
-		}
 		
 		if (door == 4)
 		{

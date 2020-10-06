@@ -144,4 +144,3 @@ public class Parts : KinematicBody2D
 	}
 
 }
-

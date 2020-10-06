@@ -27,6 +27,9 @@ margin_top = 557.681
 margin_right = 568.244
 margin_bottom = 577.681
 text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Button"]
 margin_left = -153.383

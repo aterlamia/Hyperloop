@@ -32,6 +32,16 @@ public class Story : Node2D
 	{
 		switch (starTimerCalled)
 		{
+			case 0:
+				// GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
+				// GetNode<State>("/root/State").AddState(Statetype.PHONE2_DONE);
+				// GetNode<State>("/root/State").AddState(Statetype.HIDDEN);
+				// GetNode<State>("/root/State").AddState(Statetype.TALKHEARD);
+				// GetNode<State>("/root/State").AddState(Statetype.DOOR_OPENED);
+				// GetNode<State>("/root/State").AddState(Statetype.CORRECT_NPC_TALKED_TO);
+				// GetNode<State>("/root/State").AddState(Statetype.SLEEP_TALK);
+				// GetNode<State>("/root/State").AddState(Statetype.SPEAKER_FIRED);
+				break;
 			case 4:
 			case 9:
 				GetNode<Control>("action 1").Visible = true;
@@ -128,13 +138,6 @@ public class Story : Node2D
 		Owner.GetNode<Panel>("Control/Panel").Visible = true;
 		switch (pos)
 		{
-			case 0:
-				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
-				GetNode<State>("/root/State").AddState(Statetype.PHONE2_DONE);
-				GetNode<State>("/root/State").AddState(Statetype.HIDDEN);
-				GetNode<State>("/root/State").AddState(Statetype.TALKHEARD);
-				GetNode<State>("/root/State").AddState(Statetype.DOOR_OPENED);
-				break;
 			case 1:
 				
 				Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Visible = false;
