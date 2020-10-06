@@ -23,24 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d2c4c7-3a5c-40f6-9c1e-fc2d3701e1a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Temp/skill-desc_0001_buildings.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Temp/skill-desc_0001_buildings.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Temp/skill-desc_0002_far-buildings.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Temp/skill-desc_0002_far-buildings.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Temp/skill-desc_0003_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Temp/skill-desc_0003_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/asepritefuiles/reversedb.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/asepritefuiles/reversedb.ase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/asepritefuiles/sutff.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/asepritefuiles/sutff.ase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Char.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Char.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Panel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Parts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Phone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statetype.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Statetype.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Story.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Story.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Train.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Train.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +37,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/Shared/games/ld47/Door.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/Shared/games/ld47/Door.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/Shared/games/ld47/Door.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/Shared/games/ld47/Door.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/Shared/games/ld47/Door.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/Shared/games/ld47/Door.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,7 +54,6 @@
         <option value="$PROJECT_DIR$/SignalManager.cs" />
         <option value="$PROJECT_DIR$/Phone.cs" />
         <option value="$PROJECT_DIR$/Door.cs" />
-        <option value="$PROJECT_DIR$/Panel.cs" />
         <option value="$PROJECT_DIR$/EnemeyBlock.cs" />
         <option value="$PROJECT_DIR$/bombe.cs" />
         <option value="$PROJECT_DIR$/Chose.cs" />
@@ -89,6 +63,8 @@
         <option value="$PROJECT_DIR$/.mono/assemblies/Debug/GodotSharp.xml" />
         <option value="$PROJECT_DIR$/feet.cs" />
         <option value="$PROJECT_DIR$/Char.cs" />
+        <option value="$PROJECT_DIR$/Panel.cs" />
+        <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
       </list>
     </option>
   </component>
@@ -149,6 +125,7 @@
       <workItem from="1601838120060" duration="3053000" />
       <workItem from="1601834064907" duration="504000" />
       <workItem from="1601835569441" duration="10808000" />
+      <workItem from="1601971744614" duration="857000" />
     </task>
     <servers />
   </component>
