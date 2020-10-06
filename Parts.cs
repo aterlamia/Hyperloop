@@ -57,6 +57,8 @@ public class Parts : KinematicBody2D
 		if (Input.IsActionPressed("ui_right"))
 		{
 			velocity.x -= 1;
+			Owner.GetNode<Panel>("Control/Panel").Visible = false;
+			Owner.GetNode<Panel>("Control/Panel").Visible = false;
 		}
 
 		if (Input.IsActionPressed("ui_left"))
@@ -82,8 +84,21 @@ public class Parts : KinematicBody2D
 		}
 
 
+		if (velocity.x > 0)
+		{
+			Owner.GetNode<Panel>("Control/Panel").Visible = false;
+			GD.Print("test");
+		}
+
+		if (velocity.x < 0)
+		{
+			Owner.GetNode<Panel>("Control/Panel").Visible = false;
+			GD.Print("test");
+		}
 		MoveAndSlide(velocity * delta);
 		upperlayer.MoveAndSlide(velocity * delta);
+		
+
 	}
 
 
@@ -117,6 +132,7 @@ public class Parts : KinematicBody2D
 	
 	private void _on_Door2_body_entered(object body)
 	{
+		GD.Print("test");
 		
 		canMoveBackWards = false;
 	}

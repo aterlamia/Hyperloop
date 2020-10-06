@@ -23,7 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d2c4c7-3a5c-40f6-9c1e-fc2d3701e1a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ld47.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Panel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Parts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Start.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Start.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Statetype.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Statetype.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Story.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Story.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Train.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Train.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,26 +54,27 @@
         <option value="$PROJECT_DIR$/ParallaxBackground.cs" />
         <option value="$PROJECT_DIR$/ParallaxLayer.cs" />
         <option value="$PROJECT_DIR$/Train.cs" />
-        <option value="$PROJECT_DIR$/State.cs" />
         <option value="$PROJECT_DIR$/SpeakerStart.cs" />
         <option value="$PROJECT_DIR$/light.cs" />
         <option value="$PROJECT_DIR$/ToiletDoor.cs" />
-        <option value="$PROJECT_DIR$/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Statetype.cs" />
         <option value="$PROJECT_DIR$/SignalManager.cs" />
         <option value="$PROJECT_DIR$/Phone.cs" />
         <option value="$PROJECT_DIR$/Door.cs" />
         <option value="$PROJECT_DIR$/EnemeyBlock.cs" />
         <option value="$PROJECT_DIR$/bombe.cs" />
         <option value="$PROJECT_DIR$/Chose.cs" />
-        <option value="$PROJECT_DIR$/Parts.cs" />
         <option value="$PROJECT_DIR$/Player.cs" />
-        <option value="$PROJECT_DIR$/Story.cs" />
         <option value="$PROJECT_DIR$/.mono/assemblies/Debug/GodotSharp.xml" />
         <option value="$PROJECT_DIR$/feet.cs" />
         <option value="$PROJECT_DIR$/Char.cs" />
-        <option value="$PROJECT_DIR$/Panel.cs" />
         <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
+        <option value="$PROJECT_DIR$/Statetype.cs" />
+        <option value="$PROJECT_DIR$/Parts.cs" />
+        <option value="$PROJECT_DIR$/Enemy.cs" />
+        <option value="$PROJECT_DIR$/State.cs" />
+        <option value="$PROJECT_DIR$/Panel.cs" />
+        <option value="$PROJECT_DIR$/Story.cs" />
+        <option value="$PROJECT_DIR$/Start.cs" />
       </list>
     </option>
   </component>
@@ -125,7 +135,9 @@
       <workItem from="1601838120060" duration="3053000" />
       <workItem from="1601834064907" duration="504000" />
       <workItem from="1601835569441" duration="10808000" />
-      <workItem from="1601971744614" duration="857000" />
+      <workItem from="1601971744614" duration="1452000" />
+      <workItem from="1602001925293" duration="2555000" />
+      <workItem from="1602005170168" duration="274000" />
     </task>
     <servers />
   </component>
@@ -278,22 +290,25 @@
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="100" y="128" width="3640" height="1932" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838099493" />
-    <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601841753856">
+    <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602002495137">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="1587" y="711" width="655" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601841753856" />
-    <state x="1582" y="642" width="676" height="903" key="find.popup" timestamp="1601846540207">
+    <state x="1587" y="711" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1602002495137" />
+    <state x="1582" y="642" width="676" height="903" key="find.popup" timestamp="1602003979245">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="1582" y="642" width="676" height="903" key="find.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601846540207" />
+    <state x="1582" y="642" width="676" height="903" key="find.popup/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1602003979245" />
     <state x="1584" y="524" key="run.anything.popup" timestamp="1601838453374">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="1584" y="524" key="run.anything.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601838453374" />
-    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup" timestamp="1601849837491">
+    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup" timestamp="1602004344045">
       <screen x="0" y="28" width="3840" height="2132" />
     </state>
     <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup/0.28.3840.2132/3840.0.1920.1080/960.2160.1920.1080@0.28.3840.2132" timestamp="1601849837491" />
+    <state x="1583" y="530" width="672" height="678" key="search.everywhere.popup/0.28.3840.2132/3840.0.1920.1080@0.28.3840.2132" timestamp="1602004344045" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ld47"
+config/name="Hyperloop"
 run/main_scene="res://Start.tscn"
 run/disable_stdout=true
 run/disable_stderr=true

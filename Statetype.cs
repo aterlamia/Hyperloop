@@ -20,7 +20,7 @@ namespace ld47
         PHONE2_DONE=128,
         //level 5
         HAS_TOOL= 256,
-        PANEL_OPENED = 512,
+        TALKHEARD = 512,
         // END ?
         BOMB_DEFUSED = 1024,
         DOOR3 = 2048,

@@ -18,6 +18,11 @@ public class State : Node2D
 	{
 		return (state & statetype) != Statetype.NONE;
 	}
+	
+	public Statetype GetState()
+	{
+		return state;
+	}
 	// Declare member variables here. Examples:
 	// private int a = 2;
 	// private string b = "text";

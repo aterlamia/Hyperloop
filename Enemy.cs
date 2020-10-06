@@ -29,7 +29,7 @@ public class Enemy : KinematicBody2D
 		startTimer = new Timer();
 		startTimer.OneShot = false;
 		startTimer.ProcessMode = Timer.TimerProcessMode.Physics;
-		startTimer.WaitTime = 3f;
+		startTimer.WaitTime = 4f;
 		startTimer.Connect("timeout", this, "_timer_callback");
 		AddChild(startTimer);
 		
@@ -53,7 +53,7 @@ public class Enemy : KinematicBody2D
 			{
 				case 1:
 					Owner.GetNode<RichTextLabel>("Control/Panel/Panel/RichTextLabel").BbcodeText =
-						"I havebeen thinking";
+						"I have been thinking";
 					Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Texture = speaker1;
 					break;
 				case 2:
@@ -106,6 +106,7 @@ public class Enemy : KinematicBody2D
 				case 10:
 					Owner.GetNode<RichTextLabel>("Control/Panel/Panel/RichTextLabel").BbcodeText =
 						"As long as we have hostages they wont do anything";
+					GetNode<State>("/root/State").AddState(Statetype.TALKHEARD);
 					break;
 			}
 		}

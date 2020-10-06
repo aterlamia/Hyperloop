@@ -128,6 +128,13 @@ public class Story : Node2D
 		Owner.GetNode<Panel>("Control/Panel").Visible = true;
 		switch (pos)
 		{
+			case 0:
+				GetNode<State>("/root/State").AddState(Statetype.PHONE_DONE);
+				GetNode<State>("/root/State").AddState(Statetype.PHONE2_DONE);
+				GetNode<State>("/root/State").AddState(Statetype.HIDDEN);
+				GetNode<State>("/root/State").AddState(Statetype.TALKHEARD);
+				GetNode<State>("/root/State").AddState(Statetype.DOOR_OPENED);
+				break;
 			case 1:
 				
 				Owner.GetNode<Sprite>("Control/Panel/Panel/portraitnpc").Visible = false;
@@ -238,6 +245,7 @@ public class Story : Node2D
 				GetNode<SignalManager>("/root/SignalManager").EmitSignal("PhoneDone");
 				GetNode<State>("/root/State").AddState(Statetype.PHONE2_DONE);
 				Owner.GetNode<Panel>("Control/Panel").Visible = false;
+				inPhoneCall = false;
 				break;
 		}
 	}
