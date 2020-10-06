@@ -1,8 +1,10 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
 [sub_resource type="DynamicFontData" id=1]
-font_path = "res://Assets/fonts/Pixel.ttf"
+font_path = "res://Assets/fonts/coders_crux.ttf"
 
 [resource]
-size = 13
+size = 25
+outline_size = 2
+outline_color = Color( 0.0784314, 0.0666667, 0.0666667, 1 )
 font_data = SubResource( 1 )

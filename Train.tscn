@@ -294,7 +294,7 @@ position = Vector2( 1671.44, 574.599 )
 scale = Vector2( 2.19955, 1 )
 frames = ExtResource( 3 )
 animation = "blur"
-frame = 1
+frame = 2
 speed_scale = 3.0
 playing = true
 offset = Vector2( -514.265, -246.007 )
@@ -486,7 +486,7 @@ shape = SubResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart9/Phone"]
 position = Vector2( -115.979, 17.4258 )
 frames = SubResource( 11 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="feet" type="Sprite" parent="Train/Parts/trainpart9"]
@@ -686,14 +686,12 @@ visible = false
 position = Vector2( 46.2354, -37.9452 )
 scale = Vector2( -1, 1 )
 frames = SubResource( 18 )
-frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Train/Parts/trainpart15"]
 visible = false
 position = Vector2( -525.085, -37.9611 )
 frames = SubResource( 18 )
-frame = 2
 playing = true
 
 [node name="SpeakerStart" type="Area2D" parent="Train/Parts/trainpart15"]
@@ -844,7 +842,7 @@ speaker2 = ExtResource( 57 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart17/Enemy1"]
 position = Vector2( 0, 47.933 )
 frames = SubResource( 32 )
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 
@@ -861,7 +859,7 @@ dest2 = Vector2( 700, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Train/Parts/trainpart17/Enemy2"]
 position = Vector2( 0, 49.323 )
 frames = SubResource( 43 )
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 
@@ -905,7 +903,7 @@ scale = Vector2( 1.99221, 1 )
 texture = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Train/PartsForeground"]
-position = Vector2( 37.4177, -54.3448 )
+position = Vector2( 1.4177, -151.345 )
 shape = SubResource( 45 )
 
 [node name="frame3" type="Sprite" parent="Train/PartsForeground"]
@@ -1056,6 +1054,7 @@ margin_left = 74.0
 margin_top = 3.0
 margin_right = 637.0
 margin_bottom = 61.0
+custom_fonts/bold_font = ExtResource( 21 )
 custom_fonts/normal_font = ExtResource( 21 )
 bbcode_enabled = true
 __meta__ = {
@@ -1112,34 +1111,34 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 65 )
 autoplay = true
-[connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Parts" method="_on_Blocker_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart2/Blocker" to="Control/Panel" method="_on_Blocker_body_entered"]
-[connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Train/Parts" method="_on_Blocker_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Train/Player" method="_on_Blocker_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart2/Blocker" to="Control/Panel" method="_on_Blocker_body_exited"]
-[connection signal="body_entered" from="Train/Parts/trainpart6/Door2" to="Train/Player" method="_on_Area2D_body_entered_alt"]
-[connection signal="body_entered" from="Train/Parts/trainpart6/Door2" to="Train/Parts" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart6/Door2" to="Train/Parts" method="_on_Door2_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart6/Door2" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart6/Door2" to="Train/Player" method="_on_Area2D_body_entered_alt"]
 [connection signal="body_entered" from="Train/Parts/trainpart6/Door2" to="Control/Panel" method="_on_Door_body_entered" binds= [ 4 ]]
-[connection signal="body_exited" from="Train/Parts/trainpart6/Door2" to="Train/Player" method="_on_Area2D_body_exited_alt"]
 [connection signal="body_exited" from="Train/Parts/trainpart6/Door2" to="Train/Parts" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart6/Door2" to="Train/Parts" method="_on_Door2_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart6/Door2" to="Train/Player" method="_on_Area2D_body_exited_alt"]
 [connection signal="body_exited" from="Train/Parts/trainpart6/Door2" to="Control/Panel" method="_on_Door_body_exited"]
-[connection signal="body_entered" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Player" method="_on_Area2D_body_entered_alt"]
 [connection signal="body_entered" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Parts/trainpart5/en2idler1/EnemeyBlock" method="_on_EnemeyBlock_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Parts" method="_on_Door2_body_entered"]
-[connection signal="body_exited" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Player" method="_on_EnemeyBlock_body_exited"]
+[connection signal="body_entered" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Player" method="_on_Area2D_body_entered_alt"]
 [connection signal="body_exited" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Parts/trainpart5/en2idler1/EnemeyBlock" method="_on_EnemeyBlock_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Parts" method="_on_Door2_body_exited"]
-[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Train/Parts/trainpart5/en2idler1/EnemeyBlock" to="Train/Player" method="_on_EnemeyBlock_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_entered" binds= [ 1 ]]
-[connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Parts" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Door" to="Control/Panel" method="_on_Door_body_exited"]
-[connection signal="PhoneAwnserd" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_PhoneAwnserd"]
 [connection signal="PhoneAwnserd" from="Train/Parts/trainpart9/Phone" to="Story" method="_on_Phone_PhoneAwnserd"]
+[connection signal="PhoneAwnserd" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_PhoneAwnserd"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_entered"]
 [connection signal="body_exited" from="Train/Parts/trainpart9/Phone" to="Train/Player" method="_on_Phone_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart9/feet/Feet" to="Train/Parts/trainpart9/feet" method="_on_Area2D_body_entered"]
@@ -1151,11 +1150,11 @@ autoplay = true
 [connection signal="body_exited" from="Train/Parts/trainpart11/alt char sitting/Char2" to="Train/Parts/trainpart11/alt char sitting/Char2" method="_on_Char_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart12/alt char itting3/Char3" to="Train/Parts/trainpart12/alt char itting3/Char3" method="_on_Char_body_entered"]
 [connection signal="body_exited" from="Train/Parts/trainpart12/alt char itting3/Char3" to="Train/Parts/trainpart12/alt char itting3/Char3" method="_on_Char_body_exited"]
-[connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Train/Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Train/Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart14/Door2" to="Control/Panel" method="_on_Door_body_entered" binds= [ 2 ]]
-[connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Train/Parts" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart14/Door2" to="Control/Panel" method="_on_Door_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart15/Feet4" to="Train/Parts/trainpart9/feet" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart15/Feet5" to="Train/Parts/trainpart9/feet" method="_on_Area2D_body_entered"]
@@ -1163,11 +1162,11 @@ autoplay = true
 [connection signal="body_entered" from="Train/Parts/trainpart15/SpeakerStart" to="Train/Parts/trainpart15/SpeakerStart" method="_on_SpeakerStart_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/bomb/bombe" to="Train/Parts/trainpart17/trainpart5/bomb/bombe" method="_on_bombe_body_entered"]
 [connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/bomb/bombe" to="Train/Parts/trainpart17/trainpart5/bomb/bombe" method="_on_bombe_body_exited"]
-[connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Parts" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart17/trainpart5/Door2" to="Control/Panel" method="_on_Door_body_entered" binds= [ 3 ]]
-[connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Parts" method="_on_Area2D_body_exited"]
+[connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Train/Player" method="_on_Area2D_body_exited"]
 [connection signal="body_exited" from="Train/Parts/trainpart17/trainpart5/Door2" to="Control/Panel" method="_on_Door_body_exited"]
 [connection signal="body_entered" from="Train/Parts/trainpart17/Feet7" to="Train/Parts/trainpart9/feet" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Train/Parts/trainpart17/ToiletDoor" to="Train/Parts/trainpart17/ToiletDoor" method="_on_ToiletDoor_body_entered"]

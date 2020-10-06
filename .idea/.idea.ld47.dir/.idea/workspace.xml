@@ -103,25 +103,25 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30007982" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Apps/Godot/Godot_v3.2.3-stable_mono_x11.64" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Apps/Godot/Godot_v3.2.3-stable_mono_x11.64" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="GODOT_DEBUG_RUN_CONFIGURATION" factoryName="Start and Debug" nameIsGenerated="true">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Apps/Godot/Godot_v3.2.3-stable_mono_x11.64" />
-      <option name="PROGRAM_PARAMETERS" value="--path &quot;$PROJECT_DIR$&quot;" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+    <configuration default="true" type="GODOT_DEBUG_RUN_CONFIGURATION" factoryName="Start and Debug">
+      <option name="EXE_PATH" value="$USER_HOME$/Apps/Godot/Godot_v3.2.3-stable_mono_x11.64" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Apps/Godot" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2">
         <option name="Build Solution" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GODOT_DEBUG_RUN_CONFIGURATION" factoryName="Start and Debug">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Apps/Godot/Godot_v3.2.3-stable_mono_x11.64" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Apps/Godot" />
+    <configuration name="Unnamed" type="GODOT_DEBUG_RUN_CONFIGURATION" factoryName="Start and Debug" nameIsGenerated="true">
+      <option name="EXE_PATH" value="$USER_HOME$/Apps/Godot/Godot_v3.2.3-stable_mono_x11.64" />
+      <option name="PROGRAM_PARAMETERS" value="--path &quot;$PROJECT_DIR$&quot;" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2">

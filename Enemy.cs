@@ -29,7 +29,7 @@ public class Enemy : KinematicBody2D
 		startTimer = new Timer();
 		startTimer.OneShot = false;
 		startTimer.ProcessMode = Timer.TimerProcessMode.Physics;
-		startTimer.WaitTime = 2f;
+		startTimer.WaitTime = 3f;
 		startTimer.Connect("timeout", this, "_timer_callback");
 		AddChild(startTimer);
 		

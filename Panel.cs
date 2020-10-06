@@ -33,7 +33,7 @@ public class Panel : Godot.Panel
 
 		if (GetNode<State>("/root/State").HasState(Statetype.HIDDEN) && door == 3)
 		{
-			GetNode<RichTextLabel>("Panel/RichTextLabel").Text =
+			GetNode<RichTextLabel>("Panel/RichTextLabel").BbcodeText =
 				"Let's go back first i have some information for [color=blue][b]Diane[/b][/color]";
 			Visible = true;
 			GetNode<State>("/root/State").AddState(Statetype.DOOR3);

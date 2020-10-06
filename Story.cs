@@ -326,7 +326,7 @@ public class Story : Node2D
 				break;
 			case 12:
 				Owner.GetNode<RichTextLabel>("Control/Panel/Panel/RichTextLabel").BbcodeText =
-					"But ... **BEEP** **BEEP* **BEEP** \n Damn she hung up";
+					"But ... --BEEP-- --BEEP-- --BEEP-- \n Damn she hung up";
 				Owner.GetNode<Sprite>("Control/Panel/Panel/portrait").Visible = true;
 				Owner.GetNode<Sprite>("Control/Panel/Panel/portraitgirl").Visible = false;
 				Owner.GetNode<Panel>("Control/Panel").Visible = true;
