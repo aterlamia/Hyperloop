@@ -11,8 +11,6 @@ public class State : Node2D
 	public void AddState(Statetype statetype)
 	{
 		state = state | statetype;
-		
-		GD.Print(state);
 	}
 
 

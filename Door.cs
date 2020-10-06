@@ -20,8 +20,6 @@ public class Door : Area2D
 	{
 		if (Input.IsActionJustPressed("action"))
 		{
-			GD.Print(doorNr);
-			GD.Print(GetOverlappingBodies().Count);
 			if (GetOverlappingBodies().Count > 0 && GetNode<State>("/root/State").HasState(Statetype.PHONE_DONE) &&
 			  doorNr == 1)
 			{
@@ -41,6 +39,17 @@ public class Door : Area2D
 
 				GetNode<CollisionShape2D>("DoorShape").Disabled = true;
 			}
+			
+			if (GetOverlappingBodies().Count > 0 && GetNode<State>("/root/State").HasState(Statetype.HAS_TOOL) &&
+			    doorNr == 4)
+			{
+				GetNode<SignalManager>("/root/SignalManager").EmitSignal("HideWarning");
+				GetParent<Sprite>().Texture = texture;
+
+
+				GetNode<CollisionShape2D>("DoorShape").Disabled = true;
+			}
+			
 		}
 	}
 }

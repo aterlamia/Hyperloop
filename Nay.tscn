@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://text.tres" type="DynamicFont" id=1]
+
+[node name="Control" type="Control"]
+modulate = Color( 0.956863, 1, 0.898039, 1 )
+self_modulate = Color( 0.972549, 0.972549, 0.972549, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 155.22
+margin_top = 9.06093
+margin_right = 424.22
+margin_bottom = 71.0609
+rect_scale = Vector2( 4, 4 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Congratulalations"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 228.0
+margin_top = 133.0
+margin_right = 641.0
+margin_bottom = 506.0
+text = "You saved the day and defused the bomb. You are recieved as a hero
+
+Because the omb did not explode they could appredhend a lot of the terrorist on the train.
+
+A week later Ezikiel was found and arrested.
+
+
+
+
+
+Thank you for playing this game. As a true gamejam game it has its problems and ends kind of abrupt. A lot more was hoped for but as always time limits what you can do."

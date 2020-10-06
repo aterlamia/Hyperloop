@@ -13,7 +13,10 @@
         </e>
       </e>
       <e p="Char.cs" t="Include" />
+      <e p="Chose.cs" t="Include" />
       <e p="Door.cs" t="Include" />
+      <e p="EnemeyBlock.cs" t="Include" />
+      <e p="Enemy.cs" t="Include" />
       <e p="Panel.cs" t="Include" />
       <e p="ParallaxBackground.cs" t="Include" />
       <e p="ParallaxLayer.cs" t="Include" />
@@ -22,11 +25,17 @@
       <e p="Player.cs" t="Include" />
       <e p="SignalManager.cs" t="Include" />
       <e p="SpeakerStart.cs" t="Include" />
+      <e p="Start.cs" t="Include" />
       <e p="State.cs" t="Include" />
       <e p="Statetype.cs" t="Include" />
       <e p="Story.cs" t="Include" />
+      <e p="ToiletDoor.cs" t="Include" />
       <e p="Train.cs" t="Include" />
+      <e p="bombe.cs" t="Include" />
+      <e p="feet.cs" t="Include" />
+      <e p="feetSprite.cs" t="Include" />
       <e p="ld47.csproj" t="IncludeRecursive" />
+      <e p="light.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />

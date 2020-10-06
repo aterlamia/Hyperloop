@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/asepritefuiles/Start.png" type="Texture" id=1]
+[ext_resource path="res://Start.cs" type="Script" id=2]
+
+[node name="Start" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TextureRect"]
+margin_left = 375.244
+margin_top = 557.681
+margin_right = 568.244
+margin_bottom = 577.681
+text = "START"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Button"]
+margin_left = -155.0
+margin_top = -80.0
+margin_right = 552.0
+margin_bottom = -22.0
+text = "Welcome at Hypeloop Hell, 
+Controls are the left and right key to move, and x for action (when you see an icon) and to progress in most dialogs.
+Hold shift to go faster"
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_Button_pressed"]
